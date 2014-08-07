@@ -1,0 +1,390 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script language="JavaScript" src="refine.js"></script>
+    <title>org.jboss.ws.extensions.eventing.mgmt.SubscriptionManager</title>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+<div class="small">org.jboss.ws.extensions.eventing.mgmt</div>
+<h2>クラス SubscriptionManager</h2>
+インスタンス <span id="instanceName"></span><br><br>
+    Management Bean.
+<p>
+<hr>
+<p>
+<form>
+<a name="attriburte_summary">
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF" CLASS="TableHeadingColor">
+<th align="left" colspan="2"><font size="+2">
+<b>属性の概要</b></font></th>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('CorePoolSize')" value="監視対象に追加">
+  </td>
+  <td><b>CorePoolSize</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>long</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('CompletedTaskCount')" value="監視対象に追加">
+  </td>
+  <td><b>CompletedTaskCount</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ValidateNotifications')" value="監視対象に追加">
+  </td>
+  <td><b>ValidateNotifications</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('BindAddress')" value="監視対象に追加">
+  </td>
+  <td><b>BindAddress</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('ActiveCount')" value="監視対象に追加">
+  </td>
+  <td><b>ActiveCount</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('MaximumPoolSize')" value="監視対象に追加">
+  </td>
+  <td><b>MaximumPoolSize</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('LargestPoolSize')" value="監視対象に追加">
+  </td>
+  <td><b>LargestPoolSize</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>long</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+             書き込みのみ     <input type="button" onclick="parent.instanceList.addMBeanAttribute('EventKeepAlive')" value="監視対象に追加">
+  </td>
+  <td><b>EventKeepAlive</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+             書き込みのみ     <input type="button" onclick="parent.instanceList.addMBeanAttribute('MaxPoolSize')" value="監視対象に追加">
+  </td>
+  <td><b>MaxPoolSize</b>
+    MBean Attribute.
+  </td>
+</tr>
+</form>
+
+</table>
+<p>
+
+<A NAME="operation_summary"></A>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF">
+<th align="left" colspan="2"><font size="+2">
+<b>オペレーションの概要</b></font></th>
+</tr>
+
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>registerEventSource</b>( org.jboss.ws.extensions.eventing.deployment.EventingEndpointDeployment )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.util.Date</CODE></font>
+  </td>
+  <td><b>renew</b>( java.net.URI  java.util.Date )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>addNotificationFailure</b>( org.jboss.ws.extensions.eventing.mgmt.NotificationFailure )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>dispatch</b>( java.net.URI  org.w3c.dom.Element )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>org.jboss.ws.extensions.eventing.mgmt.SubscriptionTicket</CODE></font>
+  </td>
+  <td><b>subscribe</b>( java.net.URI  org.jboss.ws.extensions.eventing.jaxws.EndpointReferenceType  org.jboss.ws.extensions.eventing.jaxws.EndpointReferenceType  java.util.Date  org.jboss.ws.extensions.eventing.mgmt.Filter )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.lang.String</CODE></font>
+  </td>
+  <td><b>showSubscriptionTable</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>unsubscribe</b>( java.net.URI )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.lang.String</CODE></font>
+  </td>
+  <td><b>showEventsourceTable</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.util.Date</CODE></font>
+  </td>
+  <td><b>getStatus</b>( java.net.URI )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>removeEventSource</b>( java.net.URI )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.util.List</CODE></font>
+  </td>
+  <td><b>showNotificationFailures</b>()
+    MBean Operation.
+  </td>
+</tr>
+
+</table>
+<p>
+
+<a name="operation_detail"></a>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+  <tr bgcolor="#CCCCFF">
+    <th align="left" colspan="1"><font size="+2">
+      <b>オペレーションの詳細</b></font>
+    </th>
+  </tr>
+</table>
+
+
+  <a name="registerEventSource">
+  <h3>registerEventSource</h3>
+  <pre>public void <b>registerEventSource</b>( org.jboss.ws.extensions.eventing.deployment.EventingEndpointDeployment )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="renew">
+  <h3>renew</h3>
+  <pre>public java.util.Date <b>renew</b>( java.net.URI  java.util.Date )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="addNotificationFailure">
+  <h3>addNotificationFailure</h3>
+  <pre>public void <b>addNotificationFailure</b>( org.jboss.ws.extensions.eventing.mgmt.NotificationFailure )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="dispatch">
+  <h3>dispatch</h3>
+  <pre>public void <b>dispatch</b>( java.net.URI  org.w3c.dom.Element )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="subscribe">
+  <h3>subscribe</h3>
+  <pre>public org.jboss.ws.extensions.eventing.mgmt.SubscriptionTicket <b>subscribe</b>( java.net.URI  org.jboss.ws.extensions.eventing.jaxws.EndpointReferenceType  org.jboss.ws.extensions.eventing.jaxws.EndpointReferenceType  java.util.Date  org.jboss.ws.extensions.eventing.mgmt.Filter )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+                  <dd>p3 - </dd>
+                  <dd>p4 - </dd>
+                  <dd>p5 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="showSubscriptionTable">
+  <h3>showSubscriptionTable</h3>
+  <pre>public java.lang.String <b>showSubscriptionTable</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="unsubscribe">
+  <h3>unsubscribe</h3>
+  <pre>public void <b>unsubscribe</b>( java.net.URI )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="showEventsourceTable">
+  <h3>showEventsourceTable</h3>
+  <pre>public java.lang.String <b>showEventsourceTable</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="getStatus">
+  <h3>getStatus</h3>
+  <pre>public java.util.Date <b>getStatus</b>( java.net.URI )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="removeEventSource">
+  <h3>removeEventSource</h3>
+  <pre>public void <b>removeEventSource</b>( java.net.URI )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="showNotificationFailures">
+  <h3>showNotificationFailures</h3>
+  <pre>public java.util.List <b>showNotificationFailures</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+
+</body>
+</html>
+<script>
+  parent.instanceList.location.href="org.jboss.ws.extensions.eventing.mgmt.SubscriptionManager_objectNames.html";
+</script>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>object names</title>
+    <script language="JavaScript" src="refine.js"></script>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body style="margin:10" onload="setAttributes(0)">
+  <span class="small"><b>Instances</b></span>
+      <input type="search" onkeyup="refine('objectNameTR',this.value)" autosave="objectName" placeholder="Filter" results="5"">
+  
+  <table width="100%">
+      <tr name="objectNameTR" id="java.lang:type=MemoryPool,name=Code Cache"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(0)" nowrap>java.lang:type=MemoryPool,name=Code Cache</td></tr>
+      <tr name="objectNameTR" id="java.lang:type=MemoryPool,name=Eden Space"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(1)" nowrap>java.lang:type=MemoryPool,name=Eden Space</td></tr>
+      <tr name="objectNameTR" id="java.lang:type=MemoryPool,name=Perm Gen"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(2)" nowrap>java.lang:type=MemoryPool,name=Perm Gen</td></tr>
+      <tr name="objectNameTR" id="java.lang:type=MemoryPool,name=Survivor Space"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(3)" nowrap>java.lang:type=MemoryPool,name=Survivor Space</td></tr>
+      <tr name="objectNameTR" id="java.lang:type=MemoryPool,name=Tenured Gen"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(4)" nowrap>java.lang:type=MemoryPool,name=Tenured Gen</td></tr>
+        </table>
+  </body>
+</html>
+<script>
+var attributeValueArray = new Array(5);
+var objectNameArray = new Array(5);
+  objectNameArray[0] = "java.lang:type=MemoryPool,name=Code Cache";
+  attributeValueArray[0] = new Array(
+       "NON_HEAP"
+       ,  "unavailable"
+       ,  "unavailable"
+       ,  "[Ljava.lang.String;@5d8e63"
+       ,  "false"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=5144576, init=163840, max=33554432, used=5132672})"
+       ,  "true"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=5144576, init=163840, max=33554432, used=5132672})"
+       ,  "0"
+       ,  "true"
+       ,  "null"
+       ,  "true"
+       ,  "Code Cache"
+       ,  "0"
+       ,  "unavailable"
+    );
+  objectNameArray[1] = "java.lang:type=MemoryPool,name=Eden Space";
+  attributeValueArray[1] = new Array(
+       "HEAP"
+       ,  "0"
+       ,  "true"
+       ,  "[Ljava.lang.String;@c5aba9"
+       ,  "true"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=3407872, init=524288, max=4194304, used=3211264})"
+       ,  "true"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=3407872, init=524288, max=4194304, used=3407872})"
+       ,  "unavailable"
+       ,  "false"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=3407872, init=524288, max=4194304, used=0})"
+       ,  "unavailable"
+       ,  "Eden Space"
+       ,  "unavailable"
+       ,  "0"
+    );
+  objectNameArray[2] = "java.lang:type=MemoryPool,name=Perm Gen";
+  attributeValueArray[2] = new Array(
+       "NON_HEAP"
+       ,  "0"
+       ,  "true"
+       ,  "[Ljava.lang.String;@dc11af"
+       ,  "true"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=27262976, init=8388608, max=67108864, used=27048736})"
+       ,  "true"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=27262976, init=8388608, max=67108864, used=27253024})"
+       ,  "0"
+       ,  "true"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=26738688, init=8388608, max=67108864, used=26682456})"
+       ,  "true"
+       ,  "Perm Gen"
+       ,  "0"
+       ,  "0"
+    );
+  objectNameArray[3] = "java.lang:type=MemoryPool,name=Survivor Space";
+  attributeValueArray[3] = new Array(
+       "HEAP"
+       ,  "0"
+       ,  "true"
+       ,  "[Ljava.lang.String;@ec7c94"
+       ,  "true"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=393216, init=65536, max=458752, used=239600})"
+       ,  "true"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=393216, init=65536, max=458752, used=327680})"
+       ,  "unavailable"
+       ,  "false"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=393216, init=65536, max=458752, used=239600})"
+       ,  "unavailable"
+       ,  "Survivor Space"
+       ,  "unavailable"
+       ,  "0"
+    );
+  objectNameArray[4] = "java.lang:type=MemoryPool,name=Tenured Gen";
+  attributeValueArray[4] = new Array(
+       "HEAP"
+       ,  "0"
+       ,  "true"
+       ,  "[Ljava.lang.String;@ffb7d4"
+       ,  "true"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=48775168, init=1441792, max=61997056, used=27827712})"
+       ,  "true"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=48775168, init=1441792, max=61997056, used=32040184})"
+       ,  "0"
+       ,  "true"
+       ,  "javax.management.openmbean.CompositeDataSupport(compositeType=javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))),contents={committed=48775168, init=1441792, max=61997056, used=26972768})"
+       ,  "true"
+       ,  "Tenured Gen"
+       ,  "0"
+       ,  "0"
+    );
+var selectedIndex = 0;
+function setAttributes(index){
+ var objectNames = getElementsByName4IE("objectName","td");
+ var arrows = getElementsByName4IE("arrow","td");
+ objectNames[selectedIndex].className = "unselected";
+ objectNames[index].className = "selected";
+ arrows[selectedIndex].innerHTML = "";
+ arrows[index].innerHTML = "\u00BB";
+ selectedIndex = index;
+ var attributeValues = attributeValueArray[index];
+ var inputs = parent.classDetail.getElementsByName4IE("attributeValue","input");
+ parent.classDetail.document.getElementById("instanceName").innerHTML= objectNameArray[index];
+
+ for(var i=0;i<attributeValues.length;i++){
+   inputs[i].value = attributeValues[i];
+ }
+}
+function addMBeanAttribute(attributeName){
+  top.addMBeanAttribute(attributeName,attributeName
+   ,getElementsByName4IE("objectName","td")[selectedIndex].innerHTML);
+}
+</script>

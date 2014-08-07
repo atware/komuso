@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>object names</title>
+    <script language="JavaScript" src="refine.js"></script>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body style="margin:10" onload="setAttributes(0)">
+  <span class="small"><b>Instances</b></span>
+      <input type="search" onkeyup="refine('objectNameTR',this.value)" autosave="objectName" placeholder="Filter" results="5"">
+  
+  <table width="100%">
+      <tr name="objectNameTR" id="jboss.jca:service=LocalTxCM,name=DefaultDS"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(0)" nowrap>jboss.jca:service=LocalTxCM,name=DefaultDS</td></tr>
+      <tr name="objectNameTR" id="jboss.jca:service=LocalTxCM,name=MySqlDS"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(1)" nowrap>jboss.jca:service=LocalTxCM,name=MySqlDS</td></tr>
+      <tr name="objectNameTR" id="jboss.jca:service=TxCM,name=JmsXA"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(2)" nowrap>jboss.jca:service=TxCM,name=JmsXA</td></tr>
+        </table>
+  </body>
+</html>
+<script>
+var attributeValueArray = new Array(3);
+var objectNameArray = new Array(3);
+  objectNameArray[0] = "jboss.jca:service=LocalTxCM,name=DefaultDS";
+  attributeValueArray[0] = new Array(
+       "jboss.security:service=JaasSecurityManager"
+       ,  "jboss:service=TransactionManager"
+       ,  "$util.getAttribute($objectName,$attribute)"
+       ,  "3"
+       ,  "null"
+       ,  "$util.getAttribute($objectName,$attribute)"
+       ,  "jboss.jca:service=ManagedConnectionPool,name=DefaultDS"
+       ,  "jboss.jca:service=CachedConnectionManager"
+       ,  "true"
+       ,  "DefaultDS"
+       ,  "Started"
+       ,  "HsqlDbRealm"
+       ,  "null"
+       ,  "TxConnectionManager"
+       ,  "true"
+       ,  "0"
+    );
+  objectNameArray[1] = "jboss.jca:service=LocalTxCM,name=MySqlDS";
+  attributeValueArray[1] = new Array(
+       "null"
+       ,  "jboss:service=TransactionManager"
+       ,  "$util.getAttribute($objectName,$attribute)"
+       ,  "3"
+       ,  "null"
+       ,  "$util.getAttribute($objectName,$attribute)"
+       ,  "jboss.jca:service=ManagedConnectionPool,name=MySqlDS"
+       ,  "jboss.jca:service=CachedConnectionManager"
+       ,  "true"
+       ,  "MySqlDS"
+       ,  "Started"
+       ,  "null"
+       ,  "null"
+       ,  "TxConnectionManager"
+       ,  "true"
+       ,  "0"
+    );
+  objectNameArray[2] = "jboss.jca:service=TxCM,name=JmsXA";
+  attributeValueArray[2] = new Array(
+       "jboss.security:service=JaasSecurityManager"
+       ,  "jboss:service=TransactionManager"
+       ,  "$util.getAttribute($objectName,$attribute)"
+       ,  "3"
+       ,  "null"
+       ,  "$util.getAttribute($objectName,$attribute)"
+       ,  "jboss.jca:service=ManagedConnectionPool,name=JmsXA"
+       ,  "jboss.jca:service=CachedConnectionManager"
+       ,  "false"
+       ,  "JmsXA"
+       ,  "Started"
+       ,  "JmsXARealm"
+       ,  "null"
+       ,  "TxConnectionManager"
+       ,  "false"
+       ,  "0"
+    );
+var selectedIndex = 0;
+function setAttributes(index){
+ var objectNames = getElementsByName4IE("objectName","td");
+ var arrows = getElementsByName4IE("arrow","td");
+ objectNames[selectedIndex].className = "unselected";
+ objectNames[index].className = "selected";
+ arrows[selectedIndex].innerHTML = "";
+ arrows[index].innerHTML = "\u00BB";
+ selectedIndex = index;
+ var attributeValues = attributeValueArray[index];
+ var inputs = parent.classDetail.getElementsByName4IE("attributeValue","input");
+ parent.classDetail.document.getElementById("instanceName").innerHTML= objectNameArray[index];
+
+ for(var i=0;i<attributeValues.length;i++){
+   inputs[i].value = attributeValues[i];
+ }
+}
+function addMBeanAttribute(attributeName){
+  top.addMBeanAttribute(attributeName,attributeName
+   ,getElementsByName4IE("objectName","td")[selectedIndex].innerHTML);
+}
+</script>

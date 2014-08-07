@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script language="JavaScript" src="refine.js"></script>
+    <title>org.jboss.resource.deployment.RARDeployment</title>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+<div class="small">org.jboss.resource.deployment</div>
+<h2>クラス RARDeployment</h2>
+インスタンス <span id="instanceName"></span><br><br>
+    JBoss JMS Resource Adapter
+<p>
+<hr>
+<p>
+<form>
+<a name="attriburte_summary">
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF" CLASS="TableHeadingColor">
+<th align="left" colspan="2"><font size="+2">
+<b>属性の概要</b></font></th>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('Name')" value="監視対象に追加">
+  </td>
+  <td><b>Name</b>
+    Return the service name
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('State')" value="監視対象に追加">
+  </td>
+  <td><b>State</b>
+    Return the service state
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('StateString')" value="監視対象に追加">
+  </td>
+  <td><b>StateString</b>
+    Return the service's state as a String
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>org.jboss.resource.metadata.ConnectorMetaData</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('MetaData')" value="監視対象に追加">
+  </td>
+  <td><b>MetaData</b>
+    The meta data
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('AuthenticationMechanism')" value="監視対象に追加">
+  </td>
+  <td><b>AuthenticationMechanism</b>
+    The authentication mechanism
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('EISType')" value="監視対象に追加">
+  </td>
+  <td><b>EISType</b>
+    The EIS type
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('License')" value="監視対象に追加">
+  </td>
+  <td><b>License</b>
+    The license
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('RAClass')" value="監視対象に追加">
+  </td>
+  <td><b>RAClass</b>
+    The resource adapter class
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('RAVersion')" value="監視対象に追加">
+  </td>
+  <td><b>RAVersion</b>
+    The resource adapter version
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('TransactionSupport')" value="監視対象に追加">
+  </td>
+  <td><b>TransactionSupport</b>
+    The transaction support
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('VendorName')" value="監視対象に追加">
+  </td>
+  <td><b>VendorName</b>
+    The vendor name
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('Version')" value="監視対象に追加">
+  </td>
+  <td><b>Version</b>
+    The spec version
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('ReauthenticationSupport')" value="監視対象に追加">
+  </td>
+  <td><b>ReauthenticationSupport</b>
+    Whether reauthentication support is supported
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>javax.resource.spi.ResourceAdapter</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('ResourceAdapter')" value="監視対象に追加">
+  </td>
+  <td><b>ResourceAdapter</b>
+    The resource adapter instance
+  </td>
+</tr>
+</form>
+
+</table>
+<p>
+
+<A NAME="operation_summary"></A>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF">
+<th align="left" colspan="2"><font size="+2">
+<b>オペレーションの概要</b></font></th>
+</tr>
+
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>create</b>()
+    create service lifecycle operation
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>start</b>()
+    start service lifecycle operation
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>stop</b>()
+    stop service lifecycle operation
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>destroy</b>()
+    destroy service lifecycle operation
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>jbossInternalLifecycle</b>( java.lang.String )
+    Internal lifecycle (for internal use)
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>javax.resource.spi.ActivationSpec</CODE></font>
+  </td>
+  <td><b>createActivationSpec</b>( java.lang.Class  java.util.Collection )
+    Create an activation spec
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.lang.Void</CODE></font>
+  </td>
+  <td><b>endpointActivation</b>( javax.resource.spi.endpoint.MessageEndpointFactory  javax.resource.spi.ActivationSpec )
+    Active the endpoint
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.lang.Void</CODE></font>
+  </td>
+  <td><b>endpointDeactivation</b>( javax.resource.spi.endpoint.MessageEndpointFactory  javax.resource.spi.ActivationSpec )
+    Deactive the endpoint
+  </td>
+</tr>
+
+</table>
+<p>
+
+<a name="operation_detail"></a>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+  <tr bgcolor="#CCCCFF">
+    <th align="left" colspan="1"><font size="+2">
+      <b>オペレーションの詳細</b></font>
+    </th>
+  </tr>
+</table>
+
+
+  <a name="create">
+  <h3>create</h3>
+  <pre>public void <b>create</b>()</pre>
+  <dl>
+    <dd>create service lifecycle operation</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="start">
+  <h3>start</h3>
+  <pre>public void <b>start</b>()</pre>
+  <dl>
+    <dd>start service lifecycle operation</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="stop">
+  <h3>stop</h3>
+  <pre>public void <b>stop</b>()</pre>
+  <dl>
+    <dd>stop service lifecycle operation</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="destroy">
+  <h3>destroy</h3>
+  <pre>public void <b>destroy</b>()</pre>
+  <dl>
+    <dd>destroy service lifecycle operation</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="jbossInternalLifecycle">
+  <h3>jbossInternalLifecycle</h3>
+  <pre>public void <b>jbossInternalLifecycle</b>( java.lang.String )</pre>
+  <dl>
+    <dd>Internal lifecycle (for internal use)</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>method - The lifecycle method</dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="createActivationSpec">
+  <h3>createActivationSpec</h3>
+  <pre>public javax.resource.spi.ActivationSpec <b>createActivationSpec</b>( java.lang.Class  java.util.Collection )</pre>
+  <dl>
+    <dd>Create an activation spec</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>MessagingType - The type of the message listener</dd>
+                  <dd>ActivationConfig - A collection of activation config properties</dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="endpointActivation">
+  <h3>endpointActivation</h3>
+  <pre>public java.lang.Void <b>endpointActivation</b>( javax.resource.spi.endpoint.MessageEndpointFactory  javax.resource.spi.ActivationSpec )</pre>
+  <dl>
+    <dd>Active the endpoint</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>MessageEndpointFactory - The message endpoint factory</dd>
+                  <dd>ActivationSpec - The activation spec</dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="endpointDeactivation">
+  <h3>endpointDeactivation</h3>
+  <pre>public java.lang.Void <b>endpointDeactivation</b>( javax.resource.spi.endpoint.MessageEndpointFactory  javax.resource.spi.ActivationSpec )</pre>
+  <dl>
+    <dd>Deactive the endpoint</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>MessageEndpointFactory - The message endpoint factory</dd>
+                  <dd>ActivationSpec - The activation spec</dd>
+              </dt>
+    </dl>
+  </dd>
+
+</body>
+</html>
+<script>
+  parent.instanceList.location.href="org.jboss.resource.deployment.RARDeployment_objectNames.html";
+</script>

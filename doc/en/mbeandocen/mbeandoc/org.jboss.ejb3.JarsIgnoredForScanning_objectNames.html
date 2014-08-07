@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>object names</title>
+    <script language="JavaScript" src="refine.js"></script>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body style="margin:10" onload="setAttributes(0)">
+  <span class="small"><b>Instances</b></span>
+  
+  <table width="100%">
+      <tr name="objectNameTR" id="jboss.ejb3:service=JarsIgnoredForScanning"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(0)" nowrap>jboss.ejb3:service=JarsIgnoredForScanning</td></tr>
+        </table>
+  </body>
+</html>
+<script>
+var attributeValueArray = new Array(1);
+var objectNameArray = new Array(1);
+  objectNameArray[0] = "jboss.ejb3:service=JarsIgnoredForScanning";
+  attributeValueArray[0] = new Array(
+       "[tomcat-ajp.jar, jboss-bean-deployer.jar, commons-validator-1.1.3.jar, tomcat-apr.jar, commons-lang-2.0.jar, servlets-webdav.jar, catalina.jar, commons-discovery.jar, jstl.jar, commons-httpclient.jar, commons-digester-1.6.jar, commons-codec-1.2.jar, jfreechart.jar, jasper-compiler-jdt.jar, otherimages.jar, catalina-manager.jar, myfaces-impl.jar, commons-dbcp.jar, myfaces.jar, commons-modeler.jar, jboss-juddiaxis.jar, wsdl4j.jar, commons-el.jar, console-mgr-classes.jar, jboss-aspect-library-jdk50.jar, javassist.jar, jboss-dependency.jar, jboss-ejb3.jar, commons-collections.jar, hibernate-entitymanager.jar, jboss-annotations-ejb3.jar, jasper-runtime.jar, servlets-default.jar, asm-attrs.jar, myfaces-jsf-api.jar, hibernate3.jar, commons-fileupload.jar, dom4j.jar, trove.jar, axis.jar, jboss-container.jar, tomcat55-service.jar, applet.jar, juddi.jar, servlets-invoker.jar, commons-logging-api.jar, jboss-ejb3x.jar, jasper-compiler.jar, asm.jar, jcommon.jar, commons-beanutils.jar, tomcat-http.jar, uddi4j.jar, naming-resources.jar, jaxen-1.1-beta-4.jar, cglib-2.1.1.jar, commons-vfs.jar, jboss-aop-jdk50.jar, tomcat-util.jar, jbossws.jar, hibernate-annotations.jar, tomcat-coyote.jar, jboss-microcontainer.jar, xmlsec.jar, commons-logging.jar, juddi-service.jar, catalina-optional.jar, snmp-adaptor.jar, ejb3-persistence.jar, commons-pool.jar]"
+       ,  "[Ljava.lang.String;@29b922"
+    );
+var selectedIndex = 0;
+function setAttributes(index){
+ var objectNames = getElementsByName4IE("objectName","td");
+ var arrows = getElementsByName4IE("arrow","td");
+ objectNames[selectedIndex].className = "unselected";
+ objectNames[index].className = "selected";
+ arrows[selectedIndex].innerHTML = "";
+ arrows[index].innerHTML = "\u00BB";
+ selectedIndex = index;
+ var attributeValues = attributeValueArray[index];
+ var inputs = parent.classDetail.getElementsByName4IE("attributeValue","input");
+ parent.classDetail.document.getElementById("instanceName").innerHTML= objectNameArray[index];
+
+ for(var i=0;i<attributeValues.length;i++){
+   inputs[i].value = attributeValues[i];
+ }
+}
+function addMBeanAttribute(attributeName){
+  top.addMBeanAttribute(attributeName,attributeName
+   ,getElementsByName4IE("objectName","td")[selectedIndex].innerHTML);
+}
+</script>

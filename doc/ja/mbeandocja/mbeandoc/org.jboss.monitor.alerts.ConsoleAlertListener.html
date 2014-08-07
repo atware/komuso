@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script language="JavaScript" src="refine.js"></script>
+    <title>org.jboss.monitor.alerts.ConsoleAlertListener</title>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+<div class="small">org.jboss.monitor.alerts</div>
+<h2>クラス ConsoleAlertListener</h2>
+インスタンス <span id="instanceName"></span><br><br>
+    Management Bean.
+<p>
+<hr>
+<p>
+<form>
+<a name="attriburte_summary">
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF" CLASS="TableHeadingColor">
+<th align="left" colspan="2"><font size="+2">
+<b>属性の概要</b></font></th>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('StateString')" value="監視対象に追加">
+  </td>
+  <td><b>StateString</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('State')" value="監視対象に追加">
+  </td>
+  <td><b>State</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('MessageTemplate')" value="監視対象に追加">
+  </td>
+  <td><b>MessageTemplate</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('Name')" value="監視対象に追加">
+  </td>
+  <td><b>Name</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('AlertName')" value="監視対象に追加">
+  </td>
+  <td><b>AlertName</b>
+    MBean Attribute.
+  </td>
+</tr>
+</form>
+
+</table>
+<p>
+
+<A NAME="operation_summary"></A>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF">
+<th align="left" colspan="2"><font size="+2">
+<b>オペレーションの概要</b></font></th>
+</tr>
+
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>start</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>jbossInternalLifecycle</b>( java.lang.String )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>destroy</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>handleNotification</b>( javax.management.Notification  java.lang.Object )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>create</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>stop</b>()
+    MBean Operation.
+  </td>
+</tr>
+
+</table>
+<p>
+
+<a name="operation_detail"></a>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+  <tr bgcolor="#CCCCFF">
+    <th align="left" colspan="1"><font size="+2">
+      <b>オペレーションの詳細</b></font>
+    </th>
+  </tr>
+</table>
+
+
+  <a name="start">
+  <h3>start</h3>
+  <pre>public void <b>start</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="jbossInternalLifecycle">
+  <h3>jbossInternalLifecycle</h3>
+  <pre>public void <b>jbossInternalLifecycle</b>( java.lang.String )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="destroy">
+  <h3>destroy</h3>
+  <pre>public void <b>destroy</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="handleNotification">
+  <h3>handleNotification</h3>
+  <pre>public void <b>handleNotification</b>( javax.management.Notification  java.lang.Object )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="create">
+  <h3>create</h3>
+  <pre>public void <b>create</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="stop">
+  <h3>stop</h3>
+  <pre>public void <b>stop</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+
+</body>
+</html>
+<script>
+  parent.instanceList.location.href="org.jboss.monitor.alerts.ConsoleAlertListener_objectNames.html";
+</script>

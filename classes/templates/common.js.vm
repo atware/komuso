@@ -1,0 +1,310 @@
+//   &nbsp;<a href="#" name="headRegion" onclick="expand('headRegion');setPreferences();return false">-&lt;head&gt;</a><br/>
+//    <div name="headRegion">
+
+function expand(theName){
+	var theLink = document.getElementsByName(theName)[0];
+	var theDiv = document.getElementsByName(theName)[1];
+	var theText = theLink.firstChild.data.substring(1);
+	if(theDiv.style.display == "none"){
+		theDiv.style.display ="block";
+		theLink.firstChild.data = "-"+theText;
+	}else{
+		theDiv.style.display = "none";
+		theLink.firstChild.data = "+"+theText;
+	}
+}
+
+/*
+	retrieve cookie
+	input:cookie name
+	return:retrieved cookie
+*/
+function getCookie(key){
+	var theCookie= "";
+	var cookies=document.cookie.split("; ");
+	for(i=0;i<cookies.length;i++){
+		var aCookie = cookies[i].split("=");
+		if(aCookie[0] == key){
+			if(aCookie.length == 2){
+				return unescape(aCookie[1]);
+			}else{
+				return "";
+			}
+		}
+	}
+	return "";
+}
+/*
+	set cookie,value will be trimmed when its size is over 4kb
+	input:cookie name,value
+	return:none
+*/
+function setCookie(key,val) {
+	var theDate = new Date();
+	theDate.setTime(theDate.getTime()+(365*1000*60*60*24));
+	document.cookie = key + "="+escape(trim4kb(val))+";expires="+theDate.toGMTString()+"; ";
+}
+
+function removeCookie(key){
+	document.cookie = key + "=;expires=Thu,01-Jan-70 00:00:01 GMT; ";
+}
+
+/*
+	set cookie,value will be trimmed when its size is over 3.5kb
+	this function works faster than setCookie, but it may be trim too much
+	input:cookie name,value
+	return:none
+*/
+function setCookieQuickly(key,val) {
+	setCookie(key,val.substring(0,3500));
+}
+/*
+	internal function that trims the value
+*/
+function trim4kb(str){
+	if(moreThan4kb(str)){
+		str = str.substring(0,4000);
+		while(moreThan4kb(str)){
+			str = str.substring(0,str.length-10);
+		}
+		return str;
+	}else{
+		return str;
+	}
+}
+/*
+	internal function that tests the value is longer than 4kb
+*/
+function moreThan4kb(str){
+	return escape(str).length > 4000;
+}
+
+/*
+	store the statuses of checkboxes and radio buttons into cookie named "preferences"
+	input:none
+	return:none
+*/
+function savePreferences(){
+	var tags = document.getElementsByTagName("input");
+	var i=0;
+	for(i=0;i<tags.length;i++){
+		if(tags[i].type == "checkbox"){
+			setPreference(tags[i].name,tags[i].checked);
+		}else if(tags[i].type == "radio"){
+			if(tags[i].checked){
+				setPreference(tags[i].name,tags[i].value);
+			}else{
+				removePreference(tags[i].name);
+			}
+		}
+	}
+}
+
+/*
+	restore the statuses of checkboxes and radio buttons from cookie named "preferences"
+	input:none
+	return:none
+*/
+function loadPreferences(){
+	var tags = document.getElementsByTagName("input");
+	var i=0;
+	for(i=0;i<tags.length;i++){
+		if(tags[i].type == "checkbox"){
+			tags[i].checked = "true" == getPreference(tags[i].name);
+		}else if(tags[i].type == "radio"){
+			tags[i].checked = tags[i].value== getPreference(tags[i].name);
+		}
+	}
+}
+function removePreference(key){
+var prefs = getCookie("preferences");
+	var equal = 0;
+	if(-1 != (equal = prefs.indexOf(key+"="))){
+		var tempPrefs = "";
+		tempPrefs = prefs.substring(0,equal);
+		tempPrefs+= prefs.substring(prefs.indexOf(";",equal)+1);
+		prefs = tempPrefs;
+		setCookie("preferences",prefs);
+	}
+}
+function setPreference(key,value){
+	var prefs = getCookie("preferences");
+	var equal = 0;
+	if(-1 != (equal = prefs.indexOf(key+"="))){
+		var tempPrefs = "";
+		tempPrefs = prefs.substring(0,equal);
+		tempPrefs+= key+"="+value;
+		tempPrefs+= prefs.substring(prefs.indexOf(";",equal));
+		prefs = tempPrefs;
+	}else{
+		prefs+= key+"="+value+";";
+	}
+	setCookie("preferences",prefs);
+}
+function getPreference(key){
+	var prefs = getCookie("preferences");
+	var equal = 0;
+	if(-1 != (equal = prefs.indexOf(key+"="))){
+		return prefs.substring(equal+key.length+1,prefs.indexOf(";",equal));
+	}else{
+		return "";
+	}
+}
+function setDefaultPreference(key,value){
+	if("" == getPreference(key)){
+		setPreference(key,value);
+	}
+}
+
+
+var req;
+function loadXMLDoc(url,callbackMethod){
+// branch for native XMLHttpRequest object
+	if (window.XMLHttpRequest) {
+		req = new XMLHttpRequest();
+		req.onreadystatechange = callbackMethod;
+		req.open("GET", url, true);
+		req.send(null);
+	// branch for IE/Windows ActiveX version
+	} else if (window.ActiveXObject) {
+		req = new ActiveXObject("Microsoft.XMLHTTP");
+		if (req) {
+			req.onreadystatechange = callbackMethod;
+			req.open("GET", url, true);
+			req.send();
+		}
+	}
+}
+
+function getParameterFromHash(key){
+    var hash = document.location.hash;
+    if(hash.length > 2){
+		var query;
+		if(hash.substring(0,1) == "#"){
+		  query = hash.substring(1);
+		}else{
+		  query = hash;
+		}
+		var equal = 0;
+		var end = 0;
+		if(0 == (equal = query.indexOf(key+"="))){
+			//the key is the first parameter
+		}else if(-1 != (equal = query.indexOf("&"+key+"="))){
+			equal++;
+		}else{
+			//parameter not found
+			return "";
+		}
+		var end = query.indexOf("&",equal);
+		if(-1 == end){
+			//it's the last parameter
+			end = query.length;
+		}
+		return query.substring(equal+key.length+1,end);
+	}else{
+	var url= document.location.href;
+	if(-1 != url.indexOf("?")){
+		var query = url.substring(url.indexOf("?")+1);
+		var equal = 0;
+		var end = 0;
+		if(0 == (equal = query.indexOf(key+"="))){
+			//the key is the first parameter
+		}else if(-1 != (equal = query.indexOf("&"+key+"="))){
+			equal++;
+		}else{
+			//parameter not found
+			return "";
+		}
+		var end = query.indexOf("&",equal);
+		if(-1 == end){
+			//it's the last parameter
+			end = query.length;
+		}
+		return query.substring(equal+key.length+1,end);
+	}else{
+	//no query string
+		return "";
+	}
+	}
+}
+
+function getHost(url){
+	url = getRoot(url);
+	if(0 == url.indexOf("http://")){
+		url = url.substring(7);
+	}else if(0 == url.indexOf("https://")){
+		url = url.substring(8);
+	}else{
+		return "undifined";
+	}
+	if(-1 != url.indexOf("@")){
+		url = url.substring(url.indexOf("@")+1);
+	}
+	if(-1 != url.indexOf(":")){
+		url = url.substring(0,url.indexOf(":")+1);
+	}
+	return url;
+}
+function getRoot(url){
+	if(0 == url.indexOf("http://")
+	|| 0 == url.indexOf("https://")){
+		if(-1 != url.indexOf("/",9)){
+		url = url.substring(0,url.indexOf("/",9));
+		}
+	}else{
+		return "undifined";
+	}
+	return url;
+}
+/*
+	trim file name
+*/
+function removeFilename(url){
+	var lastSlash = url.lastIndexOf("/");
+	if(lastSlash > 9){
+		return url.substring(0,lastSlash) + "/";
+	}else{
+		return url + "/";
+	}
+}
+function getContextPath(url){
+	var tempURL = url;
+	var firstSlash = url.indexOf("/",9);
+	var lastSlash = url.lastIndexOf("/",9);
+	if(-1 != firstSlash){
+		var secondSlash = url.indexOf("/",firstSlash+1);
+		if(-1 != secondSlash){
+			tempURL = tempURL.substring(0,secondSlash+1);
+		}else{
+			tempURL = tempURL.substring(0,firstSlash+1);
+		}
+	}else{
+		tempURL+="/";
+	}
+	return tempURL;
+}
+
+
+function supportsXMLHttpRequest(){
+	return isIE() || isSafari() || isGecko() || isOpera8();
+}
+
+function isIE(){
+	return !isOpera() && -1 != navigator.userAgent.indexOf("MSIE");
+}
+function isSafari(){
+	return -1 != navigator.userAgent.indexOf("AppleWebKit");
+}
+function isGecko(){
+	return !isSafari() && -1 != navigator.userAgent.indexOf("Gecko");
+}
+function isOpera(){
+	return -1 != navigator.userAgent.indexOf("Opera");
+}
+function isOpera7(){
+	return -1 != navigator.userAgent.indexOf("Opera 7");
+}
+function isOpera8(){
+	return -1 != navigator.userAgent.indexOf("Opera 8");
+}
+

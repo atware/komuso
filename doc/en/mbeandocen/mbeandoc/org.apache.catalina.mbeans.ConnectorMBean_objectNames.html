@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>object names</title>
+    <script language="JavaScript" src="refine.js"></script>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body style="margin:10" onload="setAttributes(0)">
+  <span class="small"><b>Instances</b></span>
+      <input type="search" onkeyup="refine('objectNameTR',this.value)" autosave="objectName" placeholder="Filter" results="5"">
+  
+  <table width="100%">
+      <tr name="objectNameTR" id="jboss.web:type=Connector,port=8009,address=%2F127.0.0.1"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(0)" nowrap>jboss.web:type=Connector,port=8009,address=%2F127.0.0.1</td></tr>
+      <tr name="objectNameTR" id="jboss.web:type=Connector,port=8080,address=%2F127.0.0.1"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(1)" nowrap>jboss.web:type=Connector,port=8080,address=%2F127.0.0.1</td></tr>
+        </table>
+  </body>
+</html>
+<script>
+var attributeValueArray = new Array(2);
+var objectNameArray = new Array(2);
+  objectNameArray[0] = "jboss.web:type=Connector,port=8009,address=%2F127.0.0.1";
+  attributeValueArray[0] = new Array(
+       "null"
+       ,  "-1"
+       ,  "AJP/1.3"
+       ,  "40"
+       ,  "null"
+       ,  "100"
+       ,  "null"
+       ,  "-1"
+       ,  "-1"
+       ,  "/127.0.0.1"
+       ,  "null"
+       ,  "http"
+       ,  "null"
+       ,  "8009"
+       ,  "null"
+       ,  "true"
+       ,  "null"
+       ,  "false"
+       ,  "null"
+       ,  "true"
+       ,  "null"
+       ,  "null"
+       ,  "null"
+       ,  "null"
+       ,  "null"
+       ,  "not readable"
+       ,  "0"
+       ,  "false"
+       ,  "null"
+       ,  "null"
+       ,  "2097152"
+       ,  "8443"
+       ,  "2048"
+       ,  "true"
+       ,  "null"
+       ,  "null"
+       ,  "5"
+       ,  "null"
+       ,  "false"
+       ,  "org.apache.coyote.ajp.AjpProtocol"
+       ,  "null"
+       ,  "false"
+       ,  "null"
+       ,  "false"
+       ,  "null"
+       ,  "null"
+       ,  "null"
+       ,  "null"
+    );
+  objectNameArray[1] = "jboss.web:type=Connector,port=8080,address=%2F127.0.0.1";
+  attributeValueArray[1] = new Array(
+       "300000"
+       ,  "-1"
+       ,  "HTTP/1.1"
+       ,  "250"
+       ,  "null"
+       ,  "100"
+       ,  "null"
+       ,  "20000"
+       ,  "-1"
+       ,  "/127.0.0.1"
+       ,  "null"
+       ,  "http"
+       ,  "null"
+       ,  "8080"
+       ,  "null"
+       ,  "true"
+       ,  "null"
+       ,  "false"
+       ,  "null"
+       ,  "null"
+       ,  "off"
+       ,  "8192"
+       ,  "null"
+       ,  "null"
+       ,  "null"
+       ,  "not readable"
+       ,  "0"
+       ,  "false"
+       ,  "null"
+       ,  "null"
+       ,  "2097152"
+       ,  "8443"
+       ,  "2048"
+       ,  "true"
+       ,  "null"
+       ,  "null"
+       ,  "5"
+       ,  "null"
+       ,  "false"
+       ,  "org.apache.coyote.http11.Http11Protocol"
+       ,  "null"
+       ,  "false"
+       ,  "null"
+       ,  "false"
+       ,  "null"
+       ,  "100"
+       ,  "true"
+       ,  "null"
+    );
+var selectedIndex = 0;
+function setAttributes(index){
+ var objectNames = getElementsByName4IE("objectName","td");
+ var arrows = getElementsByName4IE("arrow","td");
+ objectNames[selectedIndex].className = "unselected";
+ objectNames[index].className = "selected";
+ arrows[selectedIndex].innerHTML = "";
+ arrows[index].innerHTML = "\u00BB";
+ selectedIndex = index;
+ var attributeValues = attributeValueArray[index];
+ var inputs = parent.classDetail.getElementsByName4IE("attributeValue","input");
+ parent.classDetail.document.getElementById("instanceName").innerHTML= objectNameArray[index];
+
+ for(var i=0;i<attributeValues.length;i++){
+   inputs[i].value = attributeValues[i];
+ }
+}
+function addMBeanAttribute(attributeName){
+  top.addMBeanAttribute(attributeName,attributeName
+   ,getElementsByName4IE("objectName","td")[selectedIndex].innerHTML);
+}
+</script>

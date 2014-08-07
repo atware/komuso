@@ -1,0 +1,106 @@
+<html>
+<head>
+  <script language="JavaScript" src="komuso.js"></script>
+  <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script>
+var currentTab = "tab1";
+function changeTab(tabName){
+  document.getElementById(currentTab+"Content").style.display="none";
+  document.getElementById(tabName+"Content").style.display="block";
+  document.getElementById(currentTab+"title").className="unselectedtab";
+  document.getElementById(tabName+"title").className="selectedtab";
+  currentTab = tabName;
+ return false;
+}
+function fitIFrame(){
+  var theFrame = document.getElementById("mbeandump");
+var bodyHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  theFrame.height = bodyHeight -30;
+}
+function init(){
+  window.onresize = fitIFrame;
+  fitIFrame();
+
+        addMBeanAttribute("PeakThreadCount","PeakThreadCount","java.lang:type=Threading");
+      addMBeanAttribute("ThreadCount","ThreadCount","java.lang:type=Threading");
+      addMBeanAttribute("LoadedClassCount","LoadedClassCount","java.lang:type=ClassLoading");
+      addMBeanAttribute("CollectionCount","CollectionCount","java.lang:type=GarbageCollector,name=Copy");
+  }
+</script>
+<title>Komuso v2.0</title>
+</head>
+<body style="margin:0" class="small" onload="init()">
+    <div style="width:100%;height:30px;display:block">
+      <span>
+        <a href="#" onclick="return changeTab('tab1')" id="tab1title" class="selectedtab">MBeanDoc</a>
+      </span>
+      <span>
+        <a href="#" onclick="return changeTab('tab2')" id="tab2title" class="unselectedtab">Preferences</a>
+      </span>
+    </div>
+    <div id="tab1Content" style="margin:0;width:100%;display:block"><iframe style="width:100%" frameborder="0" id="mbeandump"  style="margin:0" src="mbeandoc/index.html"></iframe></div>
+    <div id="tab2Content" style="display:none;padding:3px">
+    <form>
+    <div id="attributeTable">
+     </div>
+     <br>
+    <table cellspacing="0">
+      <tr width="100%">
+        <td align="right" nowrap>JMX Remote Protocol Provider:</td>
+        <td width="100%" colspan="3">
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="jmx.remote.protocol.provider.pkgs" value="">
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap>JMX Service URL:</td>
+        <td colspan="3">
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="JMXServiceURL" value="service:jmx:rmi:///jndi/rmi://localhost:8999/jmxrmi">
+        </td>
+      </tr>
+      <tr>
+        <td width="1%" align="right" nowrap>Sampling Interval(sec):</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="interval" value="1">
+        </td>
+        <td width="1%" align="right" nowrap>User ID:</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="java.naming.security.principal" value="">
+        </td>
+      </tr>
+      <tr>
+        <td width="1%" align="right" nowrap>Number of times to sample(-1 for forever):</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="count" value="-1"
+        </td>
+        <td width="1%" align="right" nowrap>Password:</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="java.naming.security.credentials" value="">
+        </td>
+      </tr>
+      <tr>
+        <td width="1%" align="right" nowrap>logback Logger name for CSV output:</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="csvLogger" value="csv"
+        </td>
+        <td align="right" nowrap><a href="http://java.sun.com/j2se/1.5.0/docs/api/java/text/SimpleDateFormat.html" target="_blank">Timestamp format</a>:</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="dateFormat" value="yyyy/MM/dd HH:mm:ss z"
+        </td>
+      </tr>
+      <tr>
+        <td width="1%" align="right" nowrap>logback Logger name for status output:</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="statusLogger" value="status"
+        </td>
+        <td align="right" nowrap></td>
+        <td>
+        </td>
+      </tr>
+    </table>
+    <br>
+     Generated setting:
+     <textarea id="setting" style="width:100%" rows="10" onclick="this.focus();this.select();"></textarea>
+    </form>
+</div>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script language="JavaScript" src="refine.js"></script>
+    <title>org.jboss.mx.modelmbean.XMBean</title>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+<div class="small">org.jboss.mx.modelmbean</div>
+<h2>Class XMBean</h2>
+Instance <span id="instanceName"></span><br><br>
+    A deployable JBoss Messaging Queue
+<p>
+<hr>
+<p>
+<form>
+<a name="attriburte_summary">
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF" CLASS="TableHeadingColor">
+<th align="left" colspan="2"><font size="+2">
+<b>Attribute Summary</b></font></th>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('Name')" value="Monitor this">
+  </td>
+  <td><b>Name</b>
+    The destination name
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('JNDIName')" value="Monitor this">
+  </td>
+  <td><b>JNDIName</b>
+    The destination's JNDI name
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>javax.management.ObjectName</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ServerPeer')" value="Monitor this">
+  </td>
+  <td><b>ServerPeer</b>
+    The ObjectName of the server peer this destination was deployed on
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>javax.management.ObjectName</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('DLQ')" value="Monitor this">
+  </td>
+  <td><b>DLQ</b>
+    The DLQ for this queue, overrides the default DLQ on the server peer
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>javax.management.ObjectName</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ExpiryQueue')" value="Monitor this">
+  </td>
+  <td><b>ExpiryQueue</b>
+    The expiry queue for this queue, overrides the default expiry queue on the server peer
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>long</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('RedeliveryDelay')" value="Monitor this">
+  </td>
+  <td><b>RedeliveryDelay</b>
+    The delay before redelivering
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>org.w3c.dom.Element</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('SecurityConfig')" value="Monitor this">
+  </td>
+  <td><b>SecurityConfig</b>
+    The destination's security configuration
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('CreatedProgrammatically')" value="Monitor this">
+  </td>
+  <td><b>CreatedProgrammatically</b>
+    True if this destination was created programmatically
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('MessageCount')" value="Monitor this">
+  </td>
+  <td><b>MessageCount</b>
+    The number of messages in the queue
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('DeliveringCount')" value="Monitor this">
+  </td>
+  <td><b>DeliveringCount</b>
+    The number of messages currently being delivered
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('ScheduledMessageCount')" value="Monitor this">
+  </td>
+  <td><b>ScheduledMessageCount</b>
+    The number of scheduled messages in the queue
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('MaxSize')" value="Monitor this">
+  </td>
+  <td><b>MaxSize</b>
+    The maximum number of messages this queue can hold before they are dropped
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('FullSize')" value="Monitor this">
+  </td>
+  <td><b>FullSize</b>
+    The in-memory message limit, can only be set when queue is stopped
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('PageSize')" value="Monitor this">
+  </td>
+  <td><b>PageSize</b>
+    The paging size, can only be set when queue is stopped
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('DownCacheSize')" value="Monitor this">
+  </td>
+  <td><b>DownCacheSize</b>
+    The write-cache size, can only be set when queue is stopped
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('Clustered')" value="Monitor this">
+  </td>
+  <td><b>Clustered</b>
+    Is this a clustered destination?
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>org.jboss.jms.server.messagecounter.MessageCounter</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('MessageCounter')" value="Monitor this">
+  </td>
+  <td><b>MessageCounter</b>
+    Get the message counter for the queue
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>org.jboss.jms.server.messagecounter.MessageStatistics</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('MessageStatistics')" value="Monitor this">
+  </td>
+  <td><b>MessageStatistics</b>
+    Get the message statistics for the queue
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('MessageCounterHistoryDayLimit')" value="Monitor this">
+  </td>
+  <td><b>MessageCounterHistoryDayLimit</b>
+    The day limit for the message counter
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('MaxDeliveryAttempts')" value="Monitor this">
+  </td>
+  <td><b>MaxDeliveryAttempts</b>
+    The maximum delivery attempts to the queue
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('ConsumerCount')" value="Monitor this">
+  </td>
+  <td><b>ConsumerCount</b>
+    The number of consumers on the queue
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>org.jboss.messaging.core.contract.MessagingComponent</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('Instance')" value="Monitor this">
+  </td>
+  <td><b>Instance</b>
+    The instance to be accessed by select plugins via a typed hard reference
+  </td>
+</tr>
+</form>
+
+</table>
+<p>
+
+<A NAME="operation_summary"></A>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF">
+<th align="left" colspan="2"><font size="+2">
+<b>Operation Summary</b></font></th>
+</tr>
+
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>create</b>()
+    JBoss Service lifecycle operation
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>start</b>()
+    JBoss Service lifecycle operation
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>stop</b>()
+    JBoss Service lifecycle operation
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>destroy</b>()
+    JBoss Service lifecycle operation
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>removeAllMessages</b>()
+    Remove all messages in the queue
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.util.List</CODE></font>
+  </td>
+  <td><b>listAllMessages</b>()
+    List all messages
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.util.List</CODE></font>
+  </td>
+  <td><b>listAllMessages</b>( java.lang.String )
+    List all messages with selector
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.util.List</CODE></font>
+  </td>
+  <td><b>listDurableMessages</b>()
+    List durable messages
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.util.List</CODE></font>
+  </td>
+  <td><b>listDurableMessages</b>( java.lang.String )
+    List durable messages with selector
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.util.List</CODE></font>
+  </td>
+  <td><b>listNonDurableMessages</b>()
+    List non durable messages
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.util.List</CODE></font>
+  </td>
+  <td><b>listNonDurableMessages</b>( java.lang.String )
+    List non durable messages with selector
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.util.List</CODE></font>
+  </td>
+  <td><b>listMessages</b>( java.lang.String )
+    List all messages which meet the condition described in selector
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>resetMessageCounter</b>()
+    Reset the message counter
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>resetMessageCounterHistory</b>()
+    Reset the message counter history
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.lang.String</CODE></font>
+  </td>
+  <td><b>listMessageCounterAsHTML</b>()
+    Get the message counter as HTML
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.lang.String</CODE></font>
+  </td>
+  <td><b>listMessageCounterHistoryAsHTML</b>()
+    Get the message counter history as HTML
+  </td>
+</tr>
+
+</table>
+<p>
+
+<a name="operation_detail"></a>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+  <tr bgcolor="#CCCCFF">
+    <th align="left" colspan="1"><font size="+2">
+      <b>Operation Detail</b></font>
+    </th>
+  </tr>
+</table>
+
+
+  <a name="create">
+  <h3>create</h3>
+  <pre>public void <b>create</b>()</pre>
+  <dl>
+    <dd>JBoss Service lifecycle operation</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="start">
+  <h3>start</h3>
+  <pre>public void <b>start</b>()</pre>
+  <dl>
+    <dd>JBoss Service lifecycle operation</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="stop">
+  <h3>stop</h3>
+  <pre>public void <b>stop</b>()</pre>
+  <dl>
+    <dd>JBoss Service lifecycle operation</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="destroy">
+  <h3>destroy</h3>
+  <pre>public void <b>destroy</b>()</pre>
+  <dl>
+    <dd>JBoss Service lifecycle operation</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="removeAllMessages">
+  <h3>removeAllMessages</h3>
+  <pre>public void <b>removeAllMessages</b>()</pre>
+  <dl>
+    <dd>Remove all messages in the queue</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="listAllMessages">
+  <h3>listAllMessages</h3>
+  <pre>public java.util.List <b>listAllMessages</b>()</pre>
+  <dl>
+    <dd>List all messages</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="listAllMessages">
+  <h3>listAllMessages</h3>
+  <pre>public java.util.List <b>listAllMessages</b>( java.lang.String )</pre>
+  <dl>
+    <dd>List all messages with selector</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>selector - Expression to define the selector</dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="listDurableMessages">
+  <h3>listDurableMessages</h3>
+  <pre>public java.util.List <b>listDurableMessages</b>()</pre>
+  <dl>
+    <dd>List durable messages</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="listDurableMessages">
+  <h3>listDurableMessages</h3>
+  <pre>public java.util.List <b>listDurableMessages</b>( java.lang.String )</pre>
+  <dl>
+    <dd>List durable messages with selector</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>selector - Expression to define the selector</dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="listNonDurableMessages">
+  <h3>listNonDurableMessages</h3>
+  <pre>public java.util.List <b>listNonDurableMessages</b>()</pre>
+  <dl>
+    <dd>List non durable messages</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="listNonDurableMessages">
+  <h3>listNonDurableMessages</h3>
+  <pre>public java.util.List <b>listNonDurableMessages</b>( java.lang.String )</pre>
+  <dl>
+    <dd>List non durable messages with selector</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>selector - Expression to define the selector</dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="listMessages">
+  <h3>listMessages</h3>
+  <pre>public java.util.List <b>listMessages</b>( java.lang.String )</pre>
+  <dl>
+    <dd>List all messages which meet the condition described in selector</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>selector - Expression to define the selector</dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="resetMessageCounter">
+  <h3>resetMessageCounter</h3>
+  <pre>public void <b>resetMessageCounter</b>()</pre>
+  <dl>
+    <dd>Reset the message counter</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="resetMessageCounterHistory">
+  <h3>resetMessageCounterHistory</h3>
+  <pre>public void <b>resetMessageCounterHistory</b>()</pre>
+  <dl>
+    <dd>Reset the message counter history</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="listMessageCounterAsHTML">
+  <h3>listMessageCounterAsHTML</h3>
+  <pre>public java.lang.String <b>listMessageCounterAsHTML</b>()</pre>
+  <dl>
+    <dd>Get the message counter as HTML</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="listMessageCounterHistoryAsHTML">
+  <h3>listMessageCounterHistoryAsHTML</h3>
+  <pre>public java.lang.String <b>listMessageCounterHistoryAsHTML</b>()</pre>
+  <dl>
+    <dd>Get the message counter history as HTML</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+
+</body>
+</html>
+<script>
+  parent.instanceList.location.href="org.jboss.mx.modelmbean.XMBean_objectNames.html";
+</script>

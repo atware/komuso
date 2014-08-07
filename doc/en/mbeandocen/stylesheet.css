@@ -1,0 +1,59 @@
+body {
+  background-color: #FFFFFF;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1{
+font-size: 120%
+}
+
+
+.title{
+  font-size: 100%;
+}
+.small{
+  font-size:  90%;
+}
+.selectedtab{
+ margin-left: 10px;
+ text-decoration: none;
+ cursor:default;
+}
+.unselectedtab{
+ margin-left: 10px;
+ text-decoration: underline;
+}
+
+.selected{
+  background-color:#DDDDFF;
+  font-size:  90%;
+  cursor: pointer;
+}
+.selected:hover{
+  background-color:#DDDDFF;
+  cursor: pointer;
+}
+.unselected{
+  background-color:#FFFFFF;
+  font-size:  90%;
+  cursor: pointer;
+}
+.unselected:hover{
+  background-color:#DDDDFF;
+  cursor: pointer;
+}
+
+.NavBarCell1{
+  background-color:#EEEEFF;
+}
+.NavBarCell1Rev{
+  background-color:#00008B;
+}
+.NavBarFont1{
+  color:#000000;
+}
+.NavBarFont1Rev {
+  color:#FFFFFF;
+}
+
+

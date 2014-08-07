@@ -1,0 +1,560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script language="JavaScript" src="refine.js"></script>
+    <title>org.jboss.resource.connectionmanager.RARDeployment</title>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+<div class="small">org.jboss.resource.connectionmanager</div>
+<h2>クラス RARDeployment</h2>
+インスタンス <span id="instanceName"></span><br><br>
+    Management Bean.
+<p>
+<hr>
+<p>
+<form>
+<a name="attriburte_summary">
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF" CLASS="TableHeadingColor">
+<th align="left" colspan="2"><font size="+2">
+<b>属性の概要</b></font></th>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>org.w3c.dom.Element</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ManagedConnectionFactoryProperties')" value="監視対象に追加">
+  </td>
+  <td><b>ManagedConnectionFactoryProperties</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.io.PrintWriter</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('LogWriter')" value="監視対象に追加">
+  </td>
+  <td><b>LogWriter</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('State')" value="監視対象に追加">
+  </td>
+  <td><b>State</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ManagedConnectionFactoryClass')" value="監視対象に追加">
+  </td>
+  <td><b>ManagedConnectionFactoryClass</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('EisType')" value="監視対象に追加">
+  </td>
+  <td><b>EisType</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>javax.resource.spi.ManagedConnectionFactory</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('McfInstance')" value="監視対象に追加">
+  </td>
+  <td><b>McfInstance</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ConnectionInterface')" value="監視対象に追加">
+  </td>
+  <td><b>ConnectionInterface</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ConnectionImplClass')" value="監視対象に追加">
+  </td>
+  <td><b>ConnectionImplClass</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('TransactionSupport')" value="監視対象に追加">
+  </td>
+  <td><b>TransactionSupport</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ConnectionFactoryImplClass')" value="監視対象に追加">
+  </td>
+  <td><b>ConnectionFactoryImplClass</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ConnectionDefinition')" value="監視対象に追加">
+  </td>
+  <td><b>ConnectionDefinition</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('StateString')" value="監視対象に追加">
+  </td>
+  <td><b>StateString</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('Version')" value="監視対象に追加">
+  </td>
+  <td><b>Version</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('VendorName')" value="監視対象に追加">
+  </td>
+  <td><b>VendorName</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('CredentialInterface')" value="監視対象に追加">
+  </td>
+  <td><b>CredentialInterface</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ConnectionFactoryInterface')" value="監視対象に追加">
+  </td>
+  <td><b>ConnectionFactoryInterface</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('AuthenticationMechanismType')" value="監視対象に追加">
+  </td>
+  <td><b>AuthenticationMechanismType</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('RARName')" value="監視対象に追加">
+  </td>
+  <td><b>RARName</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('SpecVersion')" value="監視対象に追加">
+  </td>
+  <td><b>SpecVersion</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('Name')" value="監視対象に追加">
+  </td>
+  <td><b>Name</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ReauthenticationSupport')" value="監視対象に追加">
+  </td>
+  <td><b>ReauthenticationSupport</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>javax.management.ObjectName</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('OldRarDeployment')" value="監視対象に追加">
+  </td>
+  <td><b>OldRarDeployment</b>
+    MBean Attribute.
+  </td>
+</tr>
+</form>
+
+</table>
+<p>
+
+<A NAME="operation_summary"></A>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF">
+<th align="left" colspan="2"><font size="+2">
+<b>オペレーションの概要</b></font></th>
+</tr>
+
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>int</CODE></font>
+  </td>
+  <td><b>hashCode</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>boolean</CODE></font>
+  </td>
+  <td><b>equals</b>( java.lang.Object )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>start</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>jbossInternalLifecycle</b>( java.lang.String )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.lang.Object</CODE></font>
+  </td>
+  <td><b>createConnectionFactory</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>create</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.lang.Object</CODE></font>
+  </td>
+  <td><b>createConnectionFactory</b>( javax.resource.spi.ConnectionManager )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.lang.Object</CODE></font>
+  </td>
+  <td><b>getManagedConnectionFactoryAttribute</b>( java.lang.String )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>javax.resource.spi.ManagedConnection</CODE></font>
+  </td>
+  <td><b>matchManagedConnections</b>( java.util.Set  javax.security.auth.Subject  javax.resource.spi.ConnectionRequestInfo )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>stop</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>destroy</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>setManagedConnectionFactoryAttribute</b>( java.lang.String  java.lang.Class  java.lang.Object )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>javax.resource.spi.ManagedConnection</CODE></font>
+  </td>
+  <td><b>createManagedConnection</b>( javax.security.auth.Subject  javax.resource.spi.ConnectionRequestInfo )
+    MBean Operation.
+  </td>
+</tr>
+
+</table>
+<p>
+
+<a name="operation_detail"></a>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+  <tr bgcolor="#CCCCFF">
+    <th align="left" colspan="1"><font size="+2">
+      <b>オペレーションの詳細</b></font>
+    </th>
+  </tr>
+</table>
+
+
+  <a name="hashCode">
+  <h3>hashCode</h3>
+  <pre>public int <b>hashCode</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="equals">
+  <h3>equals</h3>
+  <pre>public boolean <b>equals</b>( java.lang.Object )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="start">
+  <h3>start</h3>
+  <pre>public void <b>start</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="jbossInternalLifecycle">
+  <h3>jbossInternalLifecycle</h3>
+  <pre>public void <b>jbossInternalLifecycle</b>( java.lang.String )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="createConnectionFactory">
+  <h3>createConnectionFactory</h3>
+  <pre>public java.lang.Object <b>createConnectionFactory</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="create">
+  <h3>create</h3>
+  <pre>public void <b>create</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="createConnectionFactory">
+  <h3>createConnectionFactory</h3>
+  <pre>public java.lang.Object <b>createConnectionFactory</b>( javax.resource.spi.ConnectionManager )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="getManagedConnectionFactoryAttribute">
+  <h3>getManagedConnectionFactoryAttribute</h3>
+  <pre>public java.lang.Object <b>getManagedConnectionFactoryAttribute</b>( java.lang.String )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="matchManagedConnections">
+  <h3>matchManagedConnections</h3>
+  <pre>public javax.resource.spi.ManagedConnection <b>matchManagedConnections</b>( java.util.Set  javax.security.auth.Subject  javax.resource.spi.ConnectionRequestInfo )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+                  <dd>p3 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="stop">
+  <h3>stop</h3>
+  <pre>public void <b>stop</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="destroy">
+  <h3>destroy</h3>
+  <pre>public void <b>destroy</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="setManagedConnectionFactoryAttribute">
+  <h3>setManagedConnectionFactoryAttribute</h3>
+  <pre>public void <b>setManagedConnectionFactoryAttribute</b>( java.lang.String  java.lang.Class  java.lang.Object )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+                  <dd>p3 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="createManagedConnection">
+  <h3>createManagedConnection</h3>
+  <pre>public javax.resource.spi.ManagedConnection <b>createManagedConnection</b>( javax.security.auth.Subject  javax.resource.spi.ConnectionRequestInfo )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+              </dt>
+    </dl>
+  </dd>
+
+</body>
+</html>
+<script>
+  parent.instanceList.location.href="org.jboss.resource.connectionmanager.RARDeployment_objectNames.html";
+</script>

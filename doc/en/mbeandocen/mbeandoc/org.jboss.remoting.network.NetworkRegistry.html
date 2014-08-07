@@ -1,0 +1,342 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script language="JavaScript" src="refine.js"></script>
+    <title>org.jboss.remoting.network.NetworkRegistry</title>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+<div class="small">org.jboss.remoting.network</div>
+<h2>Class NetworkRegistry</h2>
+Instance <span id="instanceName"></span><br><br>
+    Management Bean.
+<p>
+<hr>
+<p>
+<form>
+<a name="attriburte_summary">
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF" CLASS="TableHeadingColor">
+<th align="left" colspan="2"><font size="+2">
+<b>Attribute Summary</b></font></th>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>[Lorg.jboss.remoting.network.NetworkInstance;</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('Servers')" value="Monitor this">
+  </td>
+  <td><b>Servers</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>[Ljavax.management.MBeanNotificationInfo;</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('NotificationInfo')" value="Monitor this">
+  </td>
+  <td><b>NotificationInfo</b>
+    MBean Attribute.
+  </td>
+</tr>
+</form>
+
+</table>
+<p>
+
+<A NAME="operation_summary"></A>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF">
+<th align="left" colspan="2"><font size="+2">
+<b>Operation Summary</b></font></th>
+</tr>
+
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>updateServer</b>( org.jboss.remoting.ident.Identity  [Lorg.jboss.remoting.detection.ServerInvokerMetadata; )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>boolean</CODE></font>
+  </td>
+  <td><b>hasServer</b>( org.jboss.remoting.ident.Identity )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>changeDomain</b>( java.lang.String )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>removeNotificationListener</b>( javax.management.NotificationListener )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>addServer</b>( org.jboss.remoting.ident.Identity  [Lorg.jboss.remoting.detection.ServerInvokerMetadata; )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>preDeregister</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>postDeregister</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>[Lorg.jboss.remoting.network.NetworkInstance;</CODE></font>
+  </td>
+  <td><b>queryServers</b>( org.jboss.remoting.network.NetworkFilter )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>removeServer</b>( org.jboss.remoting.ident.Identity )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>javax.management.ObjectName</CODE></font>
+  </td>
+  <td><b>preRegister</b>( javax.management.MBeanServer  javax.management.ObjectName )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>postRegister</b>( java.lang.Boolean )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>addNotificationListener</b>( javax.management.NotificationListener  javax.management.NotificationFilter  java.lang.Object )
+    MBean Operation.
+  </td>
+</tr>
+
+</table>
+<p>
+
+<a name="operation_detail"></a>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+  <tr bgcolor="#CCCCFF">
+    <th align="left" colspan="1"><font size="+2">
+      <b>Operation Detail</b></font>
+    </th>
+  </tr>
+</table>
+
+
+  <a name="updateServer">
+  <h3>updateServer</h3>
+  <pre>public void <b>updateServer</b>( org.jboss.remoting.ident.Identity  [Lorg.jboss.remoting.detection.ServerInvokerMetadata; )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="hasServer">
+  <h3>hasServer</h3>
+  <pre>public boolean <b>hasServer</b>( org.jboss.remoting.ident.Identity )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="changeDomain">
+  <h3>changeDomain</h3>
+  <pre>public void <b>changeDomain</b>( java.lang.String )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="removeNotificationListener">
+  <h3>removeNotificationListener</h3>
+  <pre>public void <b>removeNotificationListener</b>( javax.management.NotificationListener )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="addServer">
+  <h3>addServer</h3>
+  <pre>public void <b>addServer</b>( org.jboss.remoting.ident.Identity  [Lorg.jboss.remoting.detection.ServerInvokerMetadata; )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="preDeregister">
+  <h3>preDeregister</h3>
+  <pre>public void <b>preDeregister</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="postDeregister">
+  <h3>postDeregister</h3>
+  <pre>public void <b>postDeregister</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="queryServers">
+  <h3>queryServers</h3>
+  <pre>public [Lorg.jboss.remoting.network.NetworkInstance; <b>queryServers</b>( org.jboss.remoting.network.NetworkFilter )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="removeServer">
+  <h3>removeServer</h3>
+  <pre>public void <b>removeServer</b>( org.jboss.remoting.ident.Identity )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="preRegister">
+  <h3>preRegister</h3>
+  <pre>public javax.management.ObjectName <b>preRegister</b>( javax.management.MBeanServer  javax.management.ObjectName )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="postRegister">
+  <h3>postRegister</h3>
+  <pre>public void <b>postRegister</b>( java.lang.Boolean )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="addNotificationListener">
+  <h3>addNotificationListener</h3>
+  <pre>public void <b>addNotificationListener</b>( javax.management.NotificationListener  javax.management.NotificationFilter  java.lang.Object )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+                  <dd>p3 - </dd>
+              </dt>
+    </dl>
+  </dd>
+
+</body>
+</html>
+<script>
+  parent.instanceList.location.href="org.jboss.remoting.network.NetworkRegistry_objectNames.html";
+</script>

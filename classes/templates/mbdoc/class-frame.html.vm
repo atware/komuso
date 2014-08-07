@@ -1,0 +1,7 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<HTML>
+ <FRAMESET rows="150,*">
+  <FRAME src="blank.html" name="instanceList" id="instanceList" title="instances" scrolling="yes">
+  <FRAME src="blank.html" name="classDetail" id="classDetail" title="class detail" scrolling="yes">
+ </FRAMESET>
+</HTML>

@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script language="JavaScript" src="refine.js"></script>
+    <title>org.jboss.tm.XidFactory</title>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+<div class="small">org.jboss.tm</div>
+<h2>クラス XidFactory</h2>
+インスタンス <span id="instanceName"></span><br><br>
+    Management Bean.
+<p>
+<hr>
+<p>
+<form>
+<a name="attriburte_summary">
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF" CLASS="TableHeadingColor">
+<th align="left" colspan="2"><font size="+2">
+<b>属性の概要</b></font></th>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>long</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('GlobalIdNumber')" value="監視対象に追加">
+  </td>
+  <td><b>GlobalIdNumber</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>org.jboss.tm.XidFactoryMBean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('Instance')" value="監視対象に追加">
+  </td>
+  <td><b>Instance</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('Pad')" value="監視対象に追加">
+  </td>
+  <td><b>Pad</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('BaseGlobalId')" value="監視対象に追加">
+  </td>
+  <td><b>BaseGlobalId</b>
+    MBean Attribute.
+  </td>
+</tr>
+</form>
+
+</table>
+<p>
+
+<A NAME="operation_summary"></A>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF">
+<th align="left" colspan="2"><font size="+2">
+<b>オペレーションの概要</b></font></th>
+</tr>
+
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>long</CODE></font>
+  </td>
+  <td><b>extractLocalIdFrom</b>( [B )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.lang.String</CODE></font>
+  </td>
+  <td><b>toString</b>( javax.transaction.xa.Xid )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>org.jboss.tm.XidImpl</CODE></font>
+  </td>
+  <td><b>newBranch</b>( org.jboss.tm.XidImpl  long )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>org.jboss.tm.XidImpl</CODE></font>
+  </td>
+  <td><b>newXid</b>()
+    MBean Operation.
+  </td>
+</tr>
+
+</table>
+<p>
+
+<a name="operation_detail"></a>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+  <tr bgcolor="#CCCCFF">
+    <th align="left" colspan="1"><font size="+2">
+      <b>オペレーションの詳細</b></font>
+    </th>
+  </tr>
+</table>
+
+
+  <a name="extractLocalIdFrom">
+  <h3>extractLocalIdFrom</h3>
+  <pre>public long <b>extractLocalIdFrom</b>( [B )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="toString">
+  <h3>toString</h3>
+  <pre>public java.lang.String <b>toString</b>( javax.transaction.xa.Xid )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="newBranch">
+  <h3>newBranch</h3>
+  <pre>public org.jboss.tm.XidImpl <b>newBranch</b>( org.jboss.tm.XidImpl  long )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="newXid">
+  <h3>newXid</h3>
+  <pre>public org.jboss.tm.XidImpl <b>newXid</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+
+</body>
+</html>
+<script>
+  parent.instanceList.location.href="org.jboss.tm.XidFactory_objectNames.html";
+</script>

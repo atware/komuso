@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script language="JavaScript" src="refine.js"></script>
+    <title>org.apache.tomcat.util.modeler.BaseModelMBean</title>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+<div class="small">org.apache.tomcat.util.modeler</div>
+<h2>Class BaseModelMBean</h2>
+Instance <span id="instanceName"></span><br><br>
+    Standard Engine Component
+<p>
+<hr>
+<p>
+<form>
+<a name="attriburte_summary">
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF" CLASS="TableHeadingColor">
+<th align="left" colspan="2"><font size="+2">
+<b>Attribute Summary</b></font></th>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('jvmRoute')" value="Monitor this">
+  </td>
+  <td><b>jvmRoute</b>
+    Route used for load balancing
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('baseDir')" value="Monitor this">
+  </td>
+  <td><b>baseDir</b>
+    Base dir for this engine, typically same as catalina.base system property
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('modelerType')" value="Monitor this">
+  </td>
+  <td><b>modelerType</b>
+    Type of the modeled resource. Can be set only once
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>[Ljavax.management.ObjectName;</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('valveObjectNames')" value="Monitor this">
+  </td>
+  <td><b>valveObjectNames</b>
+    ObjectNames for the valves associated with this container
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>org.apache.catalina.Realm</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('realm')" value="Monitor this">
+  </td>
+  <td><b>realm</b>
+    Associated realm.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('defaultHost')" value="Monitor this">
+  </td>
+  <td><b>defaultHost</b>
+    Name of the default Host for this Engine
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('name')" value="Monitor this">
+  </td>
+  <td><b>name</b>
+    Unique name of this Engine
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.Object</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('managedResource')" value="Monitor this">
+  </td>
+  <td><b>managedResource</b>
+    The managed resource this MBean is associated with
+  </td>
+</tr>
+</form>
+
+</table>
+<p>
+
+<A NAME="operation_summary"></A>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF">
+<th align="left" colspan="2"><font size="+2">
+<b>Operation Summary</b></font></th>
+</tr>
+
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>stop</b>()
+    Stop
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>start</b>()
+    Start
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>addChild</b>( org.apache.catalina.Container )
+    Add a virtual host
+  </td>
+</tr>
+
+</table>
+<p>
+
+<a name="operation_detail"></a>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+  <tr bgcolor="#CCCCFF">
+    <th align="left" colspan="1"><font size="+2">
+      <b>Operation Detail</b></font>
+    </th>
+  </tr>
+</table>
+
+
+  <a name="stop">
+  <h3>stop</h3>
+  <pre>public void <b>stop</b>()</pre>
+  <dl>
+    <dd>Stop</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="start">
+  <h3>start</h3>
+  <pre>public void <b>start</b>()</pre>
+  <dl>
+    <dd>Start</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="addChild">
+  <h3>addChild</h3>
+  <pre>public void <b>addChild</b>( org.apache.catalina.Container )</pre>
+  <dl>
+    <dd>Add a virtual host</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>child - Host object</dd>
+              </dt>
+    </dl>
+  </dd>
+
+</body>
+</html>
+<script>
+  parent.instanceList.location.href="org.apache.tomcat.util.modeler.BaseModelMBean_objectNames.html";
+</script>

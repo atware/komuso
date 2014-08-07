@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>object names</title>
+    <script language="JavaScript" src="refine.js"></script>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body style="margin:10" onload="setAttributes(0)">
+  <span class="small"><b>インスタンス</b></span>
+  
+  <table width="100%">
+      <tr name="objectNameTR" id="jboss.beans:service=JBossBeanDeployment,name='jbossws.sar#jbossws.beans'"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(0)" nowrap>jboss.beans:service=JBossBeanDeployment,name='jbossws.sar#jbossws.beans'</td></tr>
+        </table>
+  </body>
+</html>
+<script>
+var attributeValueArray = new Array(1);
+var objectNameArray = new Array(1);
+  objectNameArray[0] = "jboss.beans:service=JBossBeanDeployment,name='jbossws.sar#jbossws.beans'";
+  attributeValueArray[0] = new Array(
+       "Started"
+       ,  "3"
+       ,  "JBossBeanDeployment"
+    );
+var selectedIndex = 0;
+function setAttributes(index){
+ var objectNames = getElementsByName4IE("objectName","td");
+ var arrows = getElementsByName4IE("arrow","td");
+ objectNames[selectedIndex].className = "unselected";
+ objectNames[index].className = "selected";
+ arrows[selectedIndex].innerHTML = "";
+ arrows[index].innerHTML = "\u00BB";
+ selectedIndex = index;
+ var attributeValues = attributeValueArray[index];
+ var inputs = parent.classDetail.getElementsByName4IE("attributeValue","input");
+ parent.classDetail.document.getElementById("instanceName").innerHTML= objectNameArray[index];
+
+ for(var i=0;i<attributeValues.length;i++){
+   inputs[i].value = attributeValues[i];
+ }
+}
+function addMBeanAttribute(attributeName){
+  top.addMBeanAttribute(attributeName,attributeName
+   ,getElementsByName4IE("objectName","td")[selectedIndex].innerHTML);
+}
+</script>

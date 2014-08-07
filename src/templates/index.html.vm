@@ -1,0 +1,109 @@
+<html>
+<head>
+  <script language="JavaScript" src="komuso.js"></script>
+  <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script>
+var currentTab = "tab1";
+function changeTab(tabName){
+  document.getElementById(currentTab+"Content").style.display="none";
+  document.getElementById(tabName+"Content").style.display="block";
+  document.getElementById(currentTab+"title").className="unselectedtab";
+  document.getElementById(tabName+"title").className="selectedtab";
+  currentTab = tabName;
+ return false;
+}
+function fitIFrame(){
+  var theFrame = document.getElementById("mbeandump");
+var bodyHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  theFrame.height = bodyHeight -30;
+}
+function init(){
+  window.onresize = fitIFrame;
+  fitIFrame();
+
+  #set($attributeName = ".attributeName")
+  #set($objectName = ".objectName")
+  #foreach($label in $props.getProperty("mbeans").split(","))
+    #set($theAttributeName = $util.getAttributeName($label))
+    #set($theObjectName = $util.getObjectName($label))
+    addMBeanAttribute("$label","$util.getAttributeName($label)","$util.getObjectName($label)");
+  #end
+}
+</script>
+<title>$message.getString("komuso")</title>
+</head>
+<body style="margin:0" class="small" onload="init()">
+    <div style="width:100%;height:30px;display:block">
+      <span>
+        <a href="#" onclick="return changeTab('tab1')" id="tab1title" class="selectedtab">MBeanDoc</a>
+      </span>
+      <span>
+        <a href="#" onclick="return changeTab('tab2')" id="tab2title" class="unselectedtab">$message.getString("preferences")</a>
+      </span>
+    </div>
+    <div id="tab1Content" style="margin:0;width:100%;display:block"><iframe style="width:100%" frameborder="0" id="mbeandump"  style="margin:0" src="mbeandoc/index.html"></iframe></div>
+    <div id="tab2Content" style="display:none;padding:3px">
+    <form>
+    <div id="attributeTable">
+     </div>
+     <br>
+    <table cellspacing="0">
+      <tr width="100%">
+        <td align="right" nowrap>JMX Remote Protocol Provider:</td>
+        <td width="100%" colspan="3">
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="jmx.remote.protocol.provider.pkgs" value="$props.getProperty("jmx.remote.protocol.provider.pkgs")">
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap>JMX Service URL:</td>
+        <td colspan="3">
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="JMXServiceURL" value="$props.getProperty("JMXServiceURL")">
+        </td>
+      </tr>
+      <tr>
+        <td width="1%" align="right" nowrap>$message.getString("interval"):</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="interval" value="$props.getProperty("interval","1")">
+        </td>
+        <td width="1%" align="right" nowrap>$message.getString("userID"):</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="java.naming.security.principal" value="$props.getProperty("java.naming.security.principal")">
+        </td>
+      </tr>
+      <tr>
+        <td width="1%" align="right" nowrap>$message.getString("count"):</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="count" value="$props.getProperty("count","-1")"
+        </td>
+        <td width="1%" align="right" nowrap>$message.getString("password"):</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="java.naming.security.credentials" value="$props.getProperty("java.naming.security.credentials")">
+        </td>
+      </tr>
+      <tr>
+        <td width="1%" align="right" nowrap>$message.getString("loggerNameCSV"):</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="csvLogger" value="$props.getProperty("csvLogger","csv")"
+        </td>
+        <td align="right" nowrap><a href="http://java.sun.com/j2se/1.5.0/docs/api/java/text/SimpleDateFormat.html" target="_blank">$message.getString("dateFormat")</a>:</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="dateFormat" value="$props.getProperty("dateFormat","yyyy/MM/dd HH:mm:ss z")"
+        </td>
+      </tr>
+      <tr>
+        <td width="1%" align="right" nowrap>$message.getString("loggerNameStatus"):</td>
+        <td>
+          <input type="text" style="width:100%" onkeyup="constructSetting()" id="statusLogger" value="$props.getProperty("statusLogger","status")"
+        </td>
+        <td align="right" nowrap></td>
+        <td>
+        </td>
+      </tr>
+    </table>
+    <br>
+     $message.getString("generatedSettings"):
+     <textarea id="setting" style="width:100%" rows="10" onclick="this.focus();this.select();"></textarea>
+    </form>
+</div>
+</html>

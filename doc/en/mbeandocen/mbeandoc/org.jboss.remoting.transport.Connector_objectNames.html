@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>object names</title>
+    <script language="JavaScript" src="refine.js"></script>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body style="margin:10" onload="setAttributes(0)">
+  <span class="small"><b>Instances</b></span>
+      <input type="search" onkeyup="refine('objectNameTR',this.value)" autosave="objectName" placeholder="Filter" results="5"">
+  
+  <table width="100%">
+      <tr name="objectNameTR" id="jboss.messaging:service=Connector,transport=bisocket"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(0)" nowrap>jboss.messaging:service=Connector,transport=bisocket</td></tr>
+      <tr name="objectNameTR" id="jboss.remoting:service=Connector,transport=socket"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(1)" nowrap>jboss.remoting:service=Connector,transport=socket</td></tr>
+      <tr name="objectNameTR" id="jboss.remoting:type=Connector,name=DefaultEjb3Connector,handler=ejb3"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(2)" nowrap>jboss.remoting:type=Connector,name=DefaultEjb3Connector,handler=ejb3</td></tr>
+        </table>
+  </body>
+</html>
+<script>
+var attributeValueArray = new Array(3);
+var objectNameArray = new Array(3);
+  objectNameArray[0] = "jboss.messaging:service=Connector,transport=bisocket";
+  attributeValueArray[0] = new Array(
+       "bisocket://127.0.0.1:4457/?JBM_clientMaxPoolSize=200&amp;clientLeasePeriod=10000&amp;clientSocketClass=org.jboss.jms.client.remoting.ClientSocketWrapper&amp;dataType=jms&amp;marshaller=org.jboss.jms.wireformat.JMSWireFormat&amp;numberOfCallRetries=1&amp;numberOfRetries=10&amp;pingFrequency=214748364&amp;pingWindowFactor=10&amp;socket.check_connection=false&amp;stopLeaseOnFailure=true&amp;timeout=0&amp;unmarshaller=org.jboss.jms.wireformat.JMSWireFormat"
+       ,  "$util.getAttribute($objectName,$attribute)"
+       ,  "[config: null]"
+       ,  "10000"
+    );
+  objectNameArray[1] = "jboss.remoting:service=Connector,transport=socket";
+  attributeValueArray[1] = new Array(
+       "socket://127.0.0.1:4446/?dataType=invocation&amp;enableTcpNoDelay=true&amp;marshaller=org.jboss.invocation.unified.marshall.InvocationMarshaller&amp;socketTimeout=600000&amp;unmarshaller=org.jboss.invocation.unified.marshall.InvocationUnMarshaller"
+       ,  "$util.getAttribute($objectName,$attribute)"
+       ,  "[config: null]"
+       ,  "5000"
+    );
+  objectNameArray[2] = "jboss.remoting:type=Connector,name=DefaultEjb3Connector,handler=ejb3";
+  attributeValueArray[2] = new Array(
+       "socket://127.0.0.1:3873/"
+       ,  "$util.getAttribute($objectName,$attribute)"
+       ,  "[handlers: null]"
+       ,  "5000"
+    );
+var selectedIndex = 0;
+function setAttributes(index){
+ var objectNames = getElementsByName4IE("objectName","td");
+ var arrows = getElementsByName4IE("arrow","td");
+ objectNames[selectedIndex].className = "unselected";
+ objectNames[index].className = "selected";
+ arrows[selectedIndex].innerHTML = "";
+ arrows[index].innerHTML = "\u00BB";
+ selectedIndex = index;
+ var attributeValues = attributeValueArray[index];
+ var inputs = parent.classDetail.getElementsByName4IE("attributeValue","input");
+ parent.classDetail.document.getElementById("instanceName").innerHTML= objectNameArray[index];
+
+ for(var i=0;i<attributeValues.length;i++){
+   inputs[i].value = attributeValues[i];
+ }
+}
+function addMBeanAttribute(attributeName){
+  top.addMBeanAttribute(attributeName,attributeName
+   ,getElementsByName4IE("objectName","td")[selectedIndex].innerHTML);
+}
+</script>

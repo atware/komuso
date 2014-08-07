@@ -1,0 +1,661 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script language="JavaScript" src="refine.js"></script>
+    <title>org.apache.catalina.mbeans.ConnectorMBean</title>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+<div class="small">org.apache.catalina.mbeans</div>
+<h2>クラス ConnectorMBean</h2>
+インスタンス <span id="instanceName"></span><br><br>
+    Implementation of a Coyote connector
+<p>
+<hr>
+<p>
+<form>
+<a name="attriburte_summary">
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF" CLASS="TableHeadingColor">
+<th align="left" colspan="2"><font size="+2">
+<b>属性の概要</b></font></th>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('connectionUploadTimeout')" value="監視対象に追加">
+  </td>
+  <td><b>connectionUploadTimeout</b>
+    Timeout value on the incoming connection during request processing
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('keepAliveTimeout')" value="監視対象に追加">
+  </td>
+  <td><b>keepAliveTimeout</b>
+    The number of seconds Tomcat will wait for a subsequent request before closing the connection
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('protocol')" value="監視対象に追加">
+  </td>
+  <td><b>protocol</b>
+    Coyote protocol handler in use
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('maxThreads')" value="監視対象に追加">
+  </td>
+  <td><b>maxThreads</b>
+    The maximum number of request processing threads to be created
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('keystorePass')" value="監視対象に追加">
+  </td>
+  <td><b>keystorePass</b>
+    Password for accessing the key store file
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('acceptCount')" value="監視対象に追加">
+  </td>
+  <td><b>acceptCount</b>
+    The accept count for this Connector
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('URIEncoding')" value="監視対象に追加">
+  </td>
+  <td><b>URIEncoding</b>
+    Character encoding used to decode the URI
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('connectionTimeout')" value="監視対象に追加">
+  </td>
+  <td><b>connectionTimeout</b>
+    Timeout value on the incoming connection
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('connectionLinger')" value="監視対象に追加">
+  </td>
+  <td><b>connectionLinger</b>
+    Linger value on the incoming connection
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('address')" value="監視対象に追加">
+  </td>
+  <td><b>address</b>
+    The IP address on which to bind
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('strategy')" value="監視対象に追加">
+  </td>
+  <td><b>strategy</b>
+    Thread pool strategy
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('scheme')" value="監視対象に追加">
+  </td>
+  <td><b>scheme</b>
+    Protocol name for this Connector (http, https)
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('keystoreType')" value="監視対象に追加">
+  </td>
+  <td><b>keystoreType</b>
+    Type of keystore file to be used for the server certificate
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('port')" value="監視対象に追加">
+  </td>
+  <td><b>port</b>
+    The port number on which we listen for ajp13 requests
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('algorithm')" value="監視対象に追加">
+  </td>
+  <td><b>algorithm</b>
+    The certificate encoding algorithm to be used
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('tcpNoDelay')" value="監視対象に追加">
+  </td>
+  <td><b>tcpNoDelay</b>
+    Should we use TCP no delay?
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('keyAlias')" value="監視対象に追加">
+  </td>
+  <td><b>keyAlias</b>
+    Alias name of this connector's keypair and supporting certificate chain
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('xpoweredBy')" value="監視対象に追加">
+  </td>
+  <td><b>xpoweredBy</b>
+    Is generation of X-Powered-By response header enabled/disabled?
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('trustStoreType')" value="監視対象に追加">
+  </td>
+  <td><b>trustStoreType</b>
+    Type of trust store file to be used for trusted certificates
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('tomcatAuthentication')" value="監視対象に追加">
+  </td>
+  <td><b>tomcatAuthentication</b>
+    Should Tomcat perform all authentications?
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('compression')" value="監視対象に追加">
+  </td>
+  <td><b>compression</b>
+    Compression value
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('maxHttpHeaderSize')" value="監視対象に追加">
+  </td>
+  <td><b>maxHttpHeaderSize</b>
+    Maximum size in bytes of the HTTP header
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('trustStoreFile')" value="監視対象に追加">
+  </td>
+  <td><b>trustStoreFile</b>
+    Pathname to the trust store file to be used
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('sslProtocol')" value="監視対象に追加">
+  </td>
+  <td><b>sslProtocol</b>
+    SSL protocol variant to be used
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('trustStorePass')" value="監視対象に追加">
+  </td>
+  <td><b>trustStorePass</b>
+    Password for accessing the trust store file
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+             書き込みのみ     <input type="button" onclick="parent.instanceList.addMBeanAttribute('secret')" value="監視対象に追加">
+  </td>
+  <td><b>secret</b>
+    Authentication secret (I guess ... not in Javadocs)
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('proxyPort')" value="監視対象に追加">
+  </td>
+  <td><b>proxyPort</b>
+    Ther Server port to which we should pretend requests to this Connector
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('secure')" value="監視対象に追加">
+  </td>
+  <td><b>secure</b>
+    Is this a secure (SSL) Connector?
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('sslProtocols')" value="監視対象に追加">
+  </td>
+  <td><b>sslProtocols</b>
+    Comma-separated list of SSL protocol variants to be enabled
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('minSpareThreads')" value="監視対象に追加">
+  </td>
+  <td><b>minSpareThreads</b>
+    The number of request processing threads that will be created
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('maxPostSize')" value="監視対象に追加">
+  </td>
+  <td><b>maxPostSize</b>
+    Maximum size in bytes of a POST which will be handled by the servlet API provided features
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('redirectPort')" value="監視対象に追加">
+  </td>
+  <td><b>redirectPort</b>
+    The redirect port for non-SSL to SSL redirects
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('bufferSize')" value="監視対象に追加">
+  </td>
+  <td><b>bufferSize</b>
+    The input buffer size we should create on input streams
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('emptySessionPath')" value="監視対象に追加">
+  </td>
+  <td><b>emptySessionPath</b>
+    The 'empty session path' flag for this Connector
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('className')" value="監視対象に追加">
+  </td>
+  <td><b>className</b>
+    Fully qualified class name of the managed object
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('keystoreFile')" value="監視対象に追加">
+  </td>
+  <td><b>keystoreFile</b>
+    Pathname to the key store file to be used
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('threadPriority')" value="監視対象に追加">
+  </td>
+  <td><b>threadPriority</b>
+    The thread priority for processors
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('proxyName')" value="監視対象に追加">
+  </td>
+  <td><b>proxyName</b>
+    Ther Server name to which we should pretend requests to this Connector
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('useBodyEncodingForURI')" value="監視対象に追加">
+  </td>
+  <td><b>useBodyEncodingForURI</b>
+    Should the body encoding be used for URI query parameters
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('protocolHandlerClassName')" value="監視対象に追加">
+  </td>
+  <td><b>protocolHandlerClassName</b>
+    Coyote Protocol handler class name
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('maxSpareThreads')" value="監視対象に追加">
+  </td>
+  <td><b>maxSpareThreads</b>
+    The maximum number of unused request processing threads
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('enableLookups')" value="監視対象に追加">
+  </td>
+  <td><b>enableLookups</b>
+    The 'enable DNS lookups' flag for this Connector
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('clientAuth')" value="監視対象に追加">
+  </td>
+  <td><b>clientAuth</b>
+    Should we require client authentication?
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('allowTrace')" value="監視対象に追加">
+  </td>
+  <td><b>allowTrace</b>
+    Allow disabling TRACE method
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         読み取りのみ         <input type="button" onclick="parent.instanceList.addMBeanAttribute('modelerType')" value="監視対象に追加">
+  </td>
+  <td><b>modelerType</b>
+    Type of the modeled resource. Can be set only once
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('maxKeepAliveRequests')" value="監視対象に追加">
+  </td>
+  <td><b>maxKeepAliveRequests</b>
+    Maximum number of Keep-Alive requests to honor per connection
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>boolean</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('disableUploadTimeout')" value="監視対象に追加">
+  </td>
+  <td><b>disableUploadTimeout</b>
+    Should Tomcat ignore setting a timeout for uploads?
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>java.lang.String</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     読み書き可能             <input type="button" onclick="parent.instanceList.addMBeanAttribute('ciphers')" value="監視対象に追加">
+  </td>
+  <td><b>ciphers</b>
+    Comma-separated list of SSL cipher suites to be enabled
+  </td>
+</tr>
+</form>
+
+</table>
+<p>
+
+<A NAME="operation_summary"></A>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF">
+<th align="left" colspan="2"><font size="+2">
+<b>オペレーションの概要</b></font></th>
+</tr>
+
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>stop</b>()
+    Stop
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>init</b>()
+    Init
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>start</b>()
+    Start
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>pause</b>()
+    Start
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>resume</b>()
+    Stop
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>destroy</b>()
+    Destroy
+  </td>
+</tr>
+
+</table>
+<p>
+
+<a name="operation_detail"></a>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+  <tr bgcolor="#CCCCFF">
+    <th align="left" colspan="1"><font size="+2">
+      <b>オペレーションの詳細</b></font>
+    </th>
+  </tr>
+</table>
+
+
+  <a name="stop">
+  <h3>stop</h3>
+  <pre>public void <b>stop</b>()</pre>
+  <dl>
+    <dd>Stop</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="init">
+  <h3>init</h3>
+  <pre>public void <b>init</b>()</pre>
+  <dl>
+    <dd>Init</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="start">
+  <h3>start</h3>
+  <pre>public void <b>start</b>()</pre>
+  <dl>
+    <dd>Start</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="pause">
+  <h3>pause</h3>
+  <pre>public void <b>pause</b>()</pre>
+  <dl>
+    <dd>Start</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="resume">
+  <h3>resume</h3>
+  <pre>public void <b>resume</b>()</pre>
+  <dl>
+    <dd>Stop</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="destroy">
+  <h3>destroy</h3>
+  <pre>public void <b>destroy</b>()</pre>
+  <dl>
+    <dd>Destroy</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+
+</body>
+</html>
+<script>
+  parent.instanceList.location.href="org.apache.catalina.mbeans.ConnectorMBean_objectNames.html";
+</script>

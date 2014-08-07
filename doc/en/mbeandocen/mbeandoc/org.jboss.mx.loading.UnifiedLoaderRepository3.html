@@ -1,0 +1,283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script language="JavaScript" src="refine.js"></script>
+    <title>org.jboss.mx.loading.UnifiedLoaderRepository3</title>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+<div class="small">org.jboss.mx.loading</div>
+<h2>Class UnifiedLoaderRepository3</h2>
+Instance <span id="instanceName"></span><br><br>
+    Management Bean.
+<p>
+<hr>
+<p>
+<form>
+<a name="attriburte_summary">
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF" CLASS="TableHeadingColor">
+<th align="left" colspan="2"><font size="+2">
+<b>Attribute Summary</b></font></th>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('CacheSize')" value="Monitor this">
+  </td>
+  <td><b>CacheSize</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>[Ljava.net.URL;</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('URLs')" value="Monitor this">
+  </td>
+  <td><b>URLs</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>org.jboss.mx.loading.LoaderRepository</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('Instance')" value="Monitor this">
+  </td>
+  <td><b>Instance</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>int</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+         Read Only         <input type="button" onclick="parent.instanceList.addMBeanAttribute('ClassLoadersSize')" value="Monitor this">
+  </td>
+  <td><b>ClassLoadersSize</b>
+    MBean Attribute.
+  </td>
+</tr>
+ <tr>
+  <td align="right" valign="top" class="small">
+    <code>org.jboss.util.loading.Translator</code><br>
+    <input type="text" style="width:100%" name="attributeValue"><br>
+     Readable / Writable             <input type="button" onclick="parent.instanceList.addMBeanAttribute('Translator')" value="Monitor this">
+  </td>
+  <td><b>Translator</b>
+    MBean Attribute.
+  </td>
+</tr>
+</form>
+
+</table>
+<p>
+
+<A NAME="operation_summary"></A>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+<tr bgcolor="#CCCCFF">
+<th align="left" colspan="2"><font size="+2">
+<b>Operation Summary</b></font></th>
+</tr>
+
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>flush</b>()
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.util.Set</CODE></font>
+  </td>
+  <td><b>getPackageClassLoaders</b>( java.lang.String )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>java.lang.String</CODE></font>
+  </td>
+  <td><b>displayClassInfo</b>( java.lang.String )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>org.jboss.mx.loading.RepositoryClassLoader</CODE></font>
+  </td>
+  <td><b>newClassLoader</b>( java.net.URL  java.net.URL  boolean )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>org.jboss.mx.loading.RepositoryClassLoader</CODE></font>
+  </td>
+  <td><b>newClassLoader</b>( java.net.URL  boolean )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>void</CODE></font>
+  </td>
+  <td><b>removeClassLoader</b>( java.lang.ClassLoader )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>org.jboss.mx.loading.RepositoryClassLoader</CODE></font>
+  </td>
+  <td><b>getWrappingClassLoader</b>( java.lang.ClassLoader )
+    MBean Operation.
+  </td>
+</tr>
+ <tr>
+  <td align="right" Valign="top" WIDTH="1%">
+    <font size="-1"><CODE>org.jboss.mx.loading.LoaderRepository</CODE></font>
+  </td>
+  <td><b>registerClassLoader</b>( org.jboss.mx.loading.RepositoryClassLoader )
+    MBean Operation.
+  </td>
+</tr>
+
+</table>
+<p>
+
+<a name="operation_detail"></a>
+<table border="1" style="width:100%" cellspacing="0" cellpadding="3">
+  <tr bgcolor="#CCCCFF">
+    <th align="left" colspan="1"><font size="+2">
+      <b>Operation Detail</b></font>
+    </th>
+  </tr>
+</table>
+
+
+  <a name="flush">
+  <h3>flush</h3>
+  <pre>public void <b>flush</b>()</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+              </dt>
+    </dl>
+  </dd>
+  <a name="getPackageClassLoaders">
+  <h3>getPackageClassLoaders</h3>
+  <pre>public java.util.Set <b>getPackageClassLoaders</b>( java.lang.String )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="displayClassInfo">
+  <h3>displayClassInfo</h3>
+  <pre>public java.lang.String <b>displayClassInfo</b>( java.lang.String )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="newClassLoader">
+  <h3>newClassLoader</h3>
+  <pre>public org.jboss.mx.loading.RepositoryClassLoader <b>newClassLoader</b>( java.net.URL  java.net.URL  boolean )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+                  <dd>p3 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="newClassLoader">
+  <h3>newClassLoader</h3>
+  <pre>public org.jboss.mx.loading.RepositoryClassLoader <b>newClassLoader</b>( java.net.URL  boolean )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+                  <dd>p2 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="removeClassLoader">
+  <h3>removeClassLoader</h3>
+  <pre>public void <b>removeClassLoader</b>( java.lang.ClassLoader )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="getWrappingClassLoader">
+  <h3>getWrappingClassLoader</h3>
+  <pre>public org.jboss.mx.loading.RepositoryClassLoader <b>getWrappingClassLoader</b>( java.lang.ClassLoader )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+  <a name="registerClassLoader">
+  <h3>registerClassLoader</h3>
+  <pre>public org.jboss.mx.loading.LoaderRepository <b>registerClassLoader</b>( org.jboss.mx.loading.RepositoryClassLoader )</pre>
+  <dl>
+    <dd>MBean Operation.</dd>
+  </dl>
+  <p>
+  <dd>
+    <dl>
+      <dt><b>Parameters:</b>
+                  <dd>p1 - </dd>
+              </dt>
+    </dl>
+  </dd>
+
+</body>
+</html>
+<script>
+  parent.instanceList.location.href="org.jboss.mx.loading.UnifiedLoaderRepository3_objectNames.html";
+</script>

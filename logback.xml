@@ -1,0 +1,53 @@
+<configuration>
+  <appender name="CSV" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>komuso.csv</File>
+    <Append>false</Append>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <FileNamePattern>komuso.%d{yyyy-MM-dd}.csv</FileNamePattern>
+    </rollingPolicy>
+    <MinIndex>1</MinIndex>
+    <MaxIndex>10</MaxIndex>
+    <!--triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+      <MaxFileSize>10MB</MaxFileSize>
+    </triggeringPolicy-->
+    <ImmediateFlush>true</ImmediateFlush>
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <pattern>%msg%n</pattern>
+    </layout>
+  </appender>
+
+  <appender name="CSV_STDOUT"
+    class="ch.qos.logback.core.ConsoleAppender">
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <pattern>%msg%n</pattern>
+    </layout>
+  </appender>
+
+  <appender name="status" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>komuso_status.log</File>
+    <Append>false</Append>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <FileNamePattern>komuso_status.%d{yyyy-MM-dd}.gz</FileNamePattern>
+    </rollingPolicy>
+    <MinIndex>1</MinIndex>
+    <MaxIndex>10</MaxIndex>
+    <ImmediateFlush>true</ImmediateFlush>
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <pattern>%d %-5level - %msg%n</pattern>
+    </layout>
+  </appender>
+	
+  <logger name="csv">
+    <level value="DEBUG" />
+    <appender-ref ref="CSV" />
+    <appender-ref ref="CSV_STDOUT" />
+  </logger>
+
+  <logger name="status">
+    <level value="DEBUG" />
+    <appender-ref ref="status" />
+  </logger>
+  <root>
+    <level value="debug" />
+  </root>
+</configuration>

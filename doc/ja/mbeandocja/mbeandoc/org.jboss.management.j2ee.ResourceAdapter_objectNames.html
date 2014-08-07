@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>object names</title>
+    <script language="JavaScript" src="refine.js"></script>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body style="margin:10" onload="setAttributes(0)">
+  <span class="small"><b>インスタンス</b></span>
+      <input type="search" onkeyup="refine('objectNameTR',this.value)" autosave="objectName" placeholder="タイプして絞り込み" results="5"">
+  
+  <table width="100%">
+      <tr name="objectNameTR" id="jboss.management.local:name=JBoss HA LocalTransaction JDBC Wrapper,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-ha-local-jdbc.rar"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(0)" nowrap>jboss.management.local:name=JBoss HA LocalTransaction JDBC Wrapper,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-ha-local-jdbc.rar</td></tr>
+      <tr name="objectNameTR" id="jboss.management.local:name=JBoss JDBC XATransaction ResourceAdapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-ha-xa-jdbc.rar"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(1)" nowrap>jboss.management.local:name=JBoss JDBC XATransaction ResourceAdapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-ha-xa-jdbc.rar</td></tr>
+      <tr name="objectNameTR" id="jboss.management.local:name=JBoss JDBC XATransaction ResourceAdapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-xa-jdbc.rar"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(2)" nowrap>jboss.management.local:name=JBoss JDBC XATransaction ResourceAdapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-xa-jdbc.rar</td></tr>
+      <tr name="objectNameTR" id="jboss.management.local:name=JBoss LocalTransaction JDBC Wrapper,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-local-jdbc.rar"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(3)" nowrap>jboss.management.local:name=JBoss LocalTransaction JDBC Wrapper,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-local-jdbc.rar</td></tr>
+      <tr name="objectNameTR" id="jboss.management.local:name=JMS Adapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jms-ra.rar"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(4)" nowrap>jboss.management.local:name=JMS Adapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jms-ra.rar</td></tr>
+      <tr name="objectNameTR" id="jboss.management.local:name=Quartz Adapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=quartz-ra.rar"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(5)" nowrap>jboss.management.local:name=Quartz Adapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=quartz-ra.rar</td></tr>
+        </table>
+  </body>
+</html>
+<script>
+var attributeValueArray = new Array(6);
+var objectNameArray = new Array(6);
+  objectNameArray[0] = "jboss.management.local:name=JBoss HA LocalTransaction JDBC Wrapper,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-ha-local-jdbc.rar";
+  attributeValueArray[0] = new Array(
+       "jboss.management.local:J2EEApplication=null,J2EEServer=Local,ResourceAdapterModule=jboss-ha-local-jdbc.rar,j2eeType=ResourceAdapter,name=JBoss HA LocalTransaction JDBC Wrapper"
+       ,  "false"
+       ,  "jboss.jca:service=RARDeployment,name='jboss-ha-local-jdbc.rar'"
+       ,  "false"
+       ,  "false"
+       ,  "null"
+       ,  "null"
+       ,  "jboss.management.local:J2EEApplication=null,J2EEServer=Local,j2eeType=ResourceAdapterModule,name=jboss-ha-local-jdbc.rar"
+    );
+  objectNameArray[1] = "jboss.management.local:name=JBoss JDBC XATransaction ResourceAdapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-ha-xa-jdbc.rar";
+  attributeValueArray[1] = new Array(
+       "jboss.management.local:J2EEApplication=null,J2EEServer=Local,ResourceAdapterModule=jboss-ha-xa-jdbc.rar,j2eeType=ResourceAdapter,name=JBoss JDBC XATransaction ResourceAdapter"
+       ,  "false"
+       ,  "jboss.jca:service=RARDeployment,name='jboss-ha-xa-jdbc.rar'"
+       ,  "false"
+       ,  "false"
+       ,  "null"
+       ,  "null"
+       ,  "jboss.management.local:J2EEApplication=null,J2EEServer=Local,j2eeType=ResourceAdapterModule,name=jboss-ha-xa-jdbc.rar"
+    );
+  objectNameArray[2] = "jboss.management.local:name=JBoss JDBC XATransaction ResourceAdapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-xa-jdbc.rar";
+  attributeValueArray[2] = new Array(
+       "jboss.management.local:J2EEApplication=null,J2EEServer=Local,ResourceAdapterModule=jboss-xa-jdbc.rar,j2eeType=ResourceAdapter,name=JBoss JDBC XATransaction ResourceAdapter"
+       ,  "false"
+       ,  "jboss.jca:service=RARDeployment,name='jboss-xa-jdbc.rar'"
+       ,  "false"
+       ,  "false"
+       ,  "null"
+       ,  "null"
+       ,  "jboss.management.local:J2EEApplication=null,J2EEServer=Local,j2eeType=ResourceAdapterModule,name=jboss-xa-jdbc.rar"
+    );
+  objectNameArray[3] = "jboss.management.local:name=JBoss LocalTransaction JDBC Wrapper,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jboss-local-jdbc.rar";
+  attributeValueArray[3] = new Array(
+       "jboss.management.local:J2EEApplication=null,J2EEServer=Local,ResourceAdapterModule=jboss-local-jdbc.rar,j2eeType=ResourceAdapter,name=JBoss LocalTransaction JDBC Wrapper"
+       ,  "false"
+       ,  "jboss.jca:service=RARDeployment,name='jboss-local-jdbc.rar'"
+       ,  "false"
+       ,  "false"
+       ,  "jboss.management.local:ResourceAdapter=JBoss LocalTransaction JDBC Wrapper,j2eeType=JCAResource,J2EEServer=Local,name=MySqlDS"
+       ,  "jboss.management.local:ResourceAdapter=JBoss LocalTransaction JDBC Wrapper,j2eeType=JCAResource,J2EEServer=Local,name=MySqlDS"
+       ,  "jboss.management.local:J2EEApplication=null,J2EEServer=Local,j2eeType=ResourceAdapterModule,name=jboss-local-jdbc.rar"
+    );
+  objectNameArray[4] = "jboss.management.local:name=JMS Adapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=jms-ra.rar";
+  attributeValueArray[4] = new Array(
+       "jboss.management.local:J2EEApplication=null,J2EEServer=Local,ResourceAdapterModule=jms-ra.rar,j2eeType=ResourceAdapter,name=JMS Adapter"
+       ,  "false"
+       ,  "jboss.jca:service=RARDeployment,name='jms-ra.rar'"
+       ,  "false"
+       ,  "false"
+       ,  "jboss.management.local:ResourceAdapter=JMS Adapter,j2eeType=JCAResource,J2EEServer=Local,name=JmsXA"
+       ,  "jboss.management.local:ResourceAdapter=JMS Adapter,j2eeType=JCAResource,J2EEServer=Local,name=JmsXA"
+       ,  "jboss.management.local:J2EEApplication=null,J2EEServer=Local,j2eeType=ResourceAdapterModule,name=jms-ra.rar"
+    );
+  objectNameArray[5] = "jboss.management.local:name=Quartz Adapter,J2EEServer=Local,J2EEApplication=null,j2eeType=ResourceAdapter,ResourceAdapterModule=quartz-ra.rar";
+  attributeValueArray[5] = new Array(
+       "jboss.management.local:J2EEApplication=null,J2EEServer=Local,ResourceAdapterModule=quartz-ra.rar,j2eeType=ResourceAdapter,name=Quartz Adapter"
+       ,  "false"
+       ,  "jboss.jca:service=RARDeployment,name='quartz-ra.rar'"
+       ,  "false"
+       ,  "false"
+       ,  "null"
+       ,  "null"
+       ,  "jboss.management.local:J2EEApplication=null,J2EEServer=Local,j2eeType=ResourceAdapterModule,name=quartz-ra.rar"
+    );
+var selectedIndex = 0;
+function setAttributes(index){
+ var objectNames = getElementsByName4IE("objectName","td");
+ var arrows = getElementsByName4IE("arrow","td");
+ objectNames[selectedIndex].className = "unselected";
+ objectNames[index].className = "selected";
+ arrows[selectedIndex].innerHTML = "";
+ arrows[index].innerHTML = "\u00BB";
+ selectedIndex = index;
+ var attributeValues = attributeValueArray[index];
+ var inputs = parent.classDetail.getElementsByName4IE("attributeValue","input");
+ parent.classDetail.document.getElementById("instanceName").innerHTML= objectNameArray[index];
+
+ for(var i=0;i<attributeValues.length;i++){
+   inputs[i].value = attributeValues[i];
+ }
+}
+function addMBeanAttribute(attributeName){
+  top.addMBeanAttribute(attributeName,attributeName
+   ,getElementsByName4IE("objectName","td")[selectedIndex].innerHTML);
+}
+</script>

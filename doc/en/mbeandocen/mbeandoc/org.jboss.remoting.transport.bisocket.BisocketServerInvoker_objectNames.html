@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>object names</title>
+    <script language="JavaScript" src="refine.js"></script>
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body style="margin:10" onload="setAttributes(0)">
+  <span class="small"><b>Instances</b></span>
+  
+  <table width="100%">
+      <tr name="objectNameTR" id="jboss.remoting:service=invoker,transport= bisocket,host=127.0.0.1,port=4457,JBM_clientMaxPoolSize=200,clientLeasePeriod=10000,clientSocketClass=org.jboss.jms.client.remoting.ClientSocketWrapper,dataType=jms,marshaller=org.jboss.jms.wireformat.JMSWireFormat,numberOfCallRetries=1,numberOfRetries=10,pingFrequency=214748364,pingWindowFactor=10,socket.check_connection=false,stopLeaseOnFailure=true,timeout=0,unmarshaller=org.jboss.jms.wireformat.JMSWireFormat"><td name="arrow"></td><td name="objectName" class="unselected" onclick="setAttributes(0)" nowrap>jboss.remoting:service=invoker,transport= bisocket,host=127.0.0.1,port=4457,JBM_clientMaxPoolSize=200,clientLeasePeriod=10000,clientSocketClass=org.jboss.jms.client.remoting.ClientSocketWrapper,dataType=jms,marshaller=org.jboss.jms.wireformat.JMSWireFormat,numberOfCallRetries=1,numberOfRetries=10,pingFrequency=214748364,pingWindowFactor=10,socket.check_connection=false,stopLeaseOnFailure=true,timeout=0,unmarshaller=org.jboss.jms.wireformat.JMSWireFormat</td></tr>
+        </table>
+  </body>
+</html>
+<script>
+var attributeValueArray = new Array(1);
+var objectNameArray = new Array(1);
+  objectNameArray[0] = "jboss.remoting:service=invoker,transport= bisocket,host=127.0.0.1,port=4457,JBM_clientMaxPoolSize=200,clientLeasePeriod=10000,clientSocketClass=org.jboss.jms.client.remoting.ClientSocketWrapper,dataType=jms,marshaller=org.jboss.jms.wireformat.JMSWireFormat,numberOfCallRetries=1,numberOfRetries=10,pingFrequency=214748364,pingWindowFactor=10,socket.check_connection=false,stopLeaseOnFailure=true,timeout=0,unmarshaller=org.jboss.jms.wireformat.JMSWireFormat";
+  attributeValueArray[0] = new Array(
+       "0"
+       ,  "true"
+       ,  "serializable"
+       ,  "0"
+       ,  "4457"
+       ,  "1"
+       ,  "200"
+       ,  "-1"
+       ,  "300"
+       ,  "127.0.0.1"
+       ,  "null"
+       ,  "{serverSocketClass=org.jboss.jms.server.remoting.ServerSocketWrapper, pingFrequency=214748364, socket.check_connection=false, timeout=0, dataType=jms, marshaller=org.jboss.jms.wireformat.JMSWireFormat, serverBindPort=4457, pingWindowFactor=10, stopLeaseOnFailure=true, serverBindAddress=127.0.0.1, callbackTimeout=10000, onewayThreadPool=org.jboss.jms.server.remoting.DirectThreadPool, unmarshaller=org.jboss.jms.wireformat.JMSWireFormat, clientLeasePeriod=10000, numberOfRetries=10, numberOfCallRetries=1, clientSocketClass=org.jboss.jms.client.remoting.ClientSocketWrapper, JBM_clientMaxPoolSize=200}"
+       ,  "0"
+       ,  "true"
+    );
+var selectedIndex = 0;
+function setAttributes(index){
+ var objectNames = getElementsByName4IE("objectName","td");
+ var arrows = getElementsByName4IE("arrow","td");
+ objectNames[selectedIndex].className = "unselected";
+ objectNames[index].className = "selected";
+ arrows[selectedIndex].innerHTML = "";
+ arrows[index].innerHTML = "\u00BB";
+ selectedIndex = index;
+ var attributeValues = attributeValueArray[index];
+ var inputs = parent.classDetail.getElementsByName4IE("attributeValue","input");
+ parent.classDetail.document.getElementById("instanceName").innerHTML= objectNameArray[index];
+
+ for(var i=0;i<attributeValues.length;i++){
+   inputs[i].value = attributeValues[i];
+ }
+}
+function addMBeanAttribute(attributeName){
+  top.addMBeanAttribute(attributeName,attributeName
+   ,getElementsByName4IE("objectName","td")[selectedIndex].innerHTML);
+}
+</script>
