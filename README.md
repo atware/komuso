@@ -55,8 +55,6 @@ TODO: Add changes
        set JAVA_OPTS="%JAVA_OPTS% -Djboss.platform.mbeanserver"
        set JAVA_OPTS="%JAVA_OPTS% -Dcom.sun.management.jmxremote"
        set JAVA_OPTS="%JAVA_OPTS% -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.authenticate=false"
-       
-       rem $Id: run.bat 64751 2007-08-21 21:00:53Z dbhole $
        ```
      * e.g. Unix
 
@@ -71,8 +69,6 @@ TODO: Add changes
        JAVA_OPTS="$JAVA_OPTS -Djboss.platform.mbeanserver"
        JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote"
        JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.authenticate=false"
-       
-       ### $Id: run.sh 70962 2008-03-18 20:38:16Z dbhole $ ###
        ```
    * Configuring WebLogic Server
 
@@ -95,7 +91,6 @@ TODO: Add changes
        rem ---------------------------------------------------------------------------
        set CATALINA_OPTS="-Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.authenticate=false"
        ```
-
      * e.g. Unix
 
        ```bash
