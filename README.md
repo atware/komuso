@@ -24,7 +24,7 @@ You can use Komuso 1.0 for WebLogic 8.1 or prior versions which don't support JM
 
 ## Changes by atWare, Inc.
 
-TODO: Add changes
+* Fixed to be able to get the value of the CompositeDataSupport type from MBeanServerConnection.
 
 ## Usage
 
