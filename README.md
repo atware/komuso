@@ -32,20 +32,17 @@ TODO: Add changes
 
    Edit `setEnv.sh` or `setEnv.cmd` to point your `JAVA_HOME` propertly.
 2. Configuring your application
-
    * Configuring your application
 
      You can get your application JMX Remote ready by just adding following two system properties:
-
      ```none
      -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.authenticate=false
      ```
    * Configuring JBoss
 
      Follow the example below to make JBoss MBeans monitorable.
-
      * e.g. Windows
-
+     
        ```bat
        @echo off
        rem -------------------------------------------------------------------------
@@ -57,7 +54,7 @@ TODO: Add changes
        set JAVA_OPTS="%JAVA_OPTS% -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.authenticate=false"
        ```
      * e.g. Unix
-
+     
        ```bash
        #!/bin/sh
        ### ====================================================================== ###
@@ -71,16 +68,15 @@ TODO: Add changes
        JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.authenticate=false"
        ```
    * Configuring WebLogic Server
-
+    
      ```none
      There's nothing you need to configure on the server side. But you need to copy weblogic.jar to lib/ directory to make Komuso t3 protocol aware.
      ```
    * Configuring Tomcat
 
      Add one single line in your startup.bat/sh as following:
-
      * e.g. Windows
-
+       
        ```bat
        @echo off
        if "%OS%" == "Windows_NT" setlocal
@@ -92,7 +88,7 @@ TODO: Add changes
        set CATALINA_OPTS="-Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.authenticate=false"
        ```
      * e.g. Unix
-
+       
        ```bash
        #!/bin/sh
        # -----------------------------------------------------------------------------
@@ -116,18 +112,16 @@ TODO: Add changes
    java.naming.security.principal=User ID for the connection
    java.naming.security.credentials=Password for the connection
    ```
-
    * e.g. A standalone JVM is running with an MBean Server listening on 8999 and authentication is disabled.
-
+    
      ```properties
      jmx.remote.protocol.provider.pkgs=
      JMXServiceURL=service:jmx:rmi:///jndi/rmi://localhost:8999/jmxrmi
      java.naming.security.principal=
      java.naming.security.credentials=
      ```
-
    * e.g. WebLogic Server is listening on port 7001 and admin userID/password combination is weblogic/gumby1234
-
+    
      ```properties
      jmx.remote.protocol.provider.pkgs=weblogic.management.remote
      JMXServiceURL=service:jmx:t3://localhost:7001/jndi/weblogic.management.mbeanservers.domainruntime
@@ -143,15 +137,14 @@ TODO: Add changes
    MBeanDoc will be generated under the `KOMUSO_HOME/mbeandump/` directory and automatically opened with the default web browser(Win/Mac only).
 
    You can find [a sample MBeanDoc here](http://yusuke.homeip.net/komuso/en/mbeandocen/index.html).
-
    * Usage
-
+    
      ```bash
      mbeandoc.sh <YOUR_KOMUSO.properties>
      ```
-
+    
      or
-
+    
      ```bash
      mbeandoc.cmd <YOUR_KOMUSO.properties>
      ```
@@ -171,31 +164,29 @@ TODO: Add changes
 6. Monitoring
 
    It's all set! You can monitor the JMX Service by just running `komuso.sh` or `komuso.cmd`.
-
    * Running
-
+    
      ```bash
      komuso.sh <YOUR_KOMUSO.properties>
      ```
-
+    
      or
-
+    
      ```bash
      komuso.cmd <YOUR_KOMUSO.properties>
      ```
-
    * About monitoring
-
+    
      Sampled MBean attribute values will be written into standard output and `komuso.csv` in CSV format by default.
-
+    
      Komuso will also report the status of the connection, caught exceptions to `komuso_status.log` separately.
-
+    
      Log files will be rolled over every midnight and the latest 10 files will be kept.
-
+    
      Komuso uses [Logback](http://logback.qos.ch/) to write messages.
-
+    
      You can edit `logback.xml` to configure logging policy.
-
+    
      For more information, please visit the [Logback Documentation page](http://logback.qos.ch/manual/appenders.html#TimeBasedRollingPolicy).
 
 ## License
