@@ -22,7 +22,9 @@ import org.slf4j.LoggerFactory;
  * <p>Komuso2</p>
  * <p>A simple JMX monitoring tool</p>
  * <p>Copyright: Copyright (c) 2007,2008 Yusuke Yamamoto</p>
+ * <p>Copyright: Copyright (c) 2014 atWare, Inc.</p>
  * @author Yusuke Yamamoto
+ * @author Koki Kawano
  * @version 2.0
  */
 public class Komuso2 implements Runnable {
